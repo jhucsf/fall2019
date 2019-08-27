@@ -1,0 +1,84 @@
+---
+layout: default
+title: "Home page"
+---
+
+*This web page is a work in progress; don't assume it contains any useful information at this point.*
+
+## Staff
+
+TODO
+
+## Readings
+
+Recommended textbooks:
+
+* HCW: How Computers Work, Robert Young, 2009
+* PH: Computer Organization and Design, 5th edition, David A. Patterson and John L. Hennessy, 2014
+* BO: Computer Systems, 3rd edition, Randal E. Bryant and David R. O'Hallaron, 2016
+* CODE: Code, Charles Petzold, 2000
+
+## Assignments
+
+TODO
+
+## Grading
+
+TODO
+
+## Schedule
+
+Date      | Topic                                     | Readings
+--------- | ----------------------------------------- | --------
+          | **Digital Circuits**
+Th Aug 29 | Introduction, Electricity and Circuits    | CODE Chapters 4, 8, 10, 11; HCW page basic 1, basic 4
+Fr Aug 30 | Boolean Algrebra, Number Representation   | CODE Chapter 8, 15
+Mo Sep 2  | *Labor day, no class*
+We Sep 4  | Addition and Subtraction                  | CODE Chapter 12-13
+Fr Sep 6  | Feedback and Flip-Flops                   | CODE Chapter 14
+Mo Sep 9  | Memory                                    | CODE Chapter 16
+We Sep 11 | Instructions                              | CODE Chapter 17
+          | **SCRAM**
+Fr Sep 13 | SCRAM Intro, Instructions I               | SCRAM handout
+Mo Sep 16 | SCRAM Instructions II                     | 
+          | **6502**
+We Sep 18 | Introduction                              | Reference; Commodore C64 Emulation; Re-engineering the 6502 Video
+Fr Sep 20 | Stack                                     | JavaScript 6502 assembler and simulator
+Mo Sep 23 | Interrupts and Bus                        | 6502 Diagram; Fun Glitch
+          | **Midterm**
+We Sep 25 | Midterm Review                            | 
+Fr Sep 27 | Midterm
+          | **MIPS**
+Mo Sep 30 | Introduction                              | PH 2.1-2.3, 2.5-2.7
+We Oct 2  | Fast Arithmetic                           | PH 2.10, 3.3, 3.
+Fr Oct 4  | Pseudo Instructions and Functions         | PH 2.8
+Mo Oct 7  | Pipelining                                | PH 4.5-4.6
+We Oct 9  | Data Hazards                              | PH 4.7
+Fr Oct 11 | Branch Prediction                         | PH 4.8-4.9
+Mo Oct 14 | Cache Basics                              | PH 5.1-5.3
+We Oct 16 | Cache Control                             | PH 5.4, 5.8-5.9
+Fr Oct 18 | *Fall break, no class*
+Mo Oct 21 | Cache Policies                            | PH 5.7
+We Oct 23 | Floating Point Numbers                    | 	PH 3.5
+          | **x86**
+Fr Oct 25 | x86 Introduction                          | BO 3.1, online links: 1 2 3 4 5 Intel Manual
+Mo Oct 28 | Compiling C code                          | BO 3.2-3.6
+We Oct 30 | Functions and Stack                       | BO 3.7
+Fr Nov 1  | Linking                                   | BO 7
+Mo Nov 4  | Process Control                           | BO 8
+We Nov 6  | Virtual Memory                            | BO 9.1-9.5
+Fr Nov 8  | Virtual Memory II                         | BO 9.6-9.9
+          | **Networks**
+Mo Nov 4  | Unix I/O                                  | BO Chapter 11
+We Nov 6  | IP Protocol                               | BO 11.1-11.3
+Fr Nov 8  | Unix Sockets                              | BO 11.4
+Mo Nov 11 | Application protocols, HTTP               | BO 11.5-11.6
+          | **Threads and concurrency**
+We Nov 13 | Concurrency with processes, I/O multiplexing | BO 12.1-12.2
+Fr Nov 15 | Concurrency with threads                  | BO 12.3
+Mo Nov 25 | *Thanksgiving vacation, no class*
+We Nov 27 | *Thanksgiving vacation, no class*
+Fr Nov 29 | *Thanksgiving vacation, no class*
+Mo Dec 2  | Synchronizing access to data              | BO 12.4-12.5
+We Dec 4  | Parallelism, concurrency issues           | BO 12.7
+Fr Dec 6  | Final exam review

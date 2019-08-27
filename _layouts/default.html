@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>{{site.coursename}}: {{page.title}}</title>
+	<link rel="shortcut icon" href="{{site.baseurl}}/img/favicon.png">
+	<style>
+		table {
+			border-collapse: collapse;
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+		}
+
+		tr { border: 1px solid black; }
+		
+		th {
+			text-align: left;
+		}
+		
+		th, td {
+			padding: 4px 8px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>{{site.coursename}}: {{page.title}}</h1>
+	{{content}}
+</body>
+
+</html>
+
+<!--
+vim:ts=2:
+-->
