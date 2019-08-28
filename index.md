@@ -3,11 +3,9 @@ layout: default
 title: "Home page"
 ---
 
-*This web page is a work in progress; don't assume it contains any useful information at this point.*
+## What is this web page?
 
-## Staff
-
-TODO
+This web page supplements [Prof. Koehn's CSF web page](https://www.cs.jhu.edu/~phi/csf).  It is mainly intended for Section 02 of the course, taught by [David Hovemeyer](https://www.cs.jhu.edu/~daveho).
 
 ## Readings
 
@@ -20,18 +18,26 @@ Recommended textbooks:
 
 ## Assignments
 
-TODO
+Homework assignments are based on assignments designed by [Peter Froehlich](https://www.cs.jhu.edu/~phf) for [his version of the class](https://www.cs.jhu.edu/~phf/2018/fall/cs229/).
+
+Coming soon...
 
 ## Grading
 
-TODO
+* Each assignment (total of 7): 10%
+* Midterm: 10%
+* Final exam: 20%
+
+Assignment late policy: 5% deduction for each day.
 
 ## Schedule
 
+The schedule is tentative and subject to change.  Any changes will be announced in class.
+
 Date      | Topic                                     | Readings
 --------- | ----------------------------------------- | --------
+Th Aug 29 | Introduction: Electricity and Circuits    | CODE Chapters 4, 8, 10, 11; HCW page basic 1, basic 4
           | **Digital Circuits**
-Th Aug 29 | Introduction, Electricity and Circuits    | CODE Chapters 4, 8, 10, 11; HCW page basic 1, basic 4
 Fr Aug 30 | Boolean Algrebra, Number Representation   | CODE Chapter 8, 15
 Mo Sep 2  | *Labor day, no class*
 We Sep 4  | Addition and Subtraction                  | CODE Chapter 12-13
@@ -39,8 +45,8 @@ Fr Sep 6  | Feedback and Flip-Flops                   | CODE Chapter 14
 Mo Sep 9  | Memory                                    | CODE Chapter 16
 We Sep 11 | Instructions                              | CODE Chapter 17
           | **SCRAM**
-Fr Sep 13 | SCRAM Intro, Instructions I               | SCRAM handout
-Mo Sep 16 | SCRAM Instructions II                     | 
+Fr Sep 13 | SCRAM Introduction                        | SCRAM handout
+Mo Sep 16 | SCRAM Instructions                        | 
           | **6502**
 We Sep 18 | Introduction                              | Reference; Commodore C64 Emulation; Re-engineering the 6502 Video
 Fr Sep 20 | Stack                                     | JavaScript 6502 assembler and simulator
@@ -69,7 +75,7 @@ Mo Nov 4  | Process Control                           | BO 8
 We Nov 6  | Virtual Memory                            | BO 9.1-9.5
 Fr Nov 8  | Virtual Memory II                         | BO 9.6-9.9
           | **Networks**
-Mo Nov 4  | Unix I/O                                  | BO Chapter 11
+Mo Nov 4  | Unix I/O                                  | BO 10
 We Nov 6  | IP Protocol                               | BO 11.1-11.3
 Fr Nov 8  | Unix Sockets                              | BO 11.4
 Mo Nov 11 | Application protocols, HTTP               | BO 11.5-11.6
