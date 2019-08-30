@@ -36,7 +36,7 @@ The schedule is tentative and subject to change.  Any changes will be announced 
 
 Date      | Topic                                     | Readings
 --------- | ----------------------------------------- | --------
-Th Aug 29 | Introduction: Electricity and Circuits    | CODE Chapters 4, 8, 10, 11; HCW page basic 1, basic 4
+Th Aug 29 | Introduction: Electricity and Circuits ([slides](lec/lec1.pdf), [markup](lec/lec1-ink.pdf))    | CODE Chapters 4, 8, 10, 11; HCW page basic 1, basic 4
           | **Digital Circuits**
 Fr Aug 30 | Boolean Algrebra, Number Representation   | CODE Chapter 8, 15
 Mo Sep 2  | *Labor day, no class*
