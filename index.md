@@ -11,7 +11,7 @@ This web page supplements [Prof. Koehn's CSF web page](https://www.cs.jhu.edu/~p
 
 Recommended textbooks:
 
-* HCW: How Computers Work, Robert Young, 2009
+* HCW: [How Computers Work](http://www.fastchip.net/howcomputerswork/p1.html), Robert Young, 2009
 * PH: Computer Organization and Design, 5th edition, David A. Patterson and John L. Hennessy, 2014
 * BO: Computer Systems, 3rd edition, Randal E. Bryant and David R. O'Hallaron, 2016
 * CODE: Code, Charles Petzold, 2000
@@ -45,12 +45,12 @@ Fr Sep 6  | Feedback and Flip-Flops                   | CODE Chapter 14
 Mo Sep 9  | Memory                                    | CODE Chapter 16
 We Sep 11 | Instructions                              | CODE Chapter 17
           | **SCRAM**
-Fr Sep 13 | SCRAM Introduction                        | SCRAM handout
+Fr Sep 13 | SCRAM Introduction                        | [SCRAM handout](https://www.cs.jhu.edu/~phi/csf/scram/dewdney-omnibus-scram.pdf)
 Mo Sep 16 | SCRAM Instructions                        | 
           | **6502**
-We Sep 18 | Introduction                              | Reference; Commodore C64 Emulation; Re-engineering the 6502 Video
-Fr Sep 20 | Stack                                     | JavaScript 6502 assembler and simulator
-Mo Sep 23 | Interrupts and Bus                        | 6502 Diagram; Fun Glitch
+We Sep 18 | Introduction                              | [Reference](http://obelisk.me.uk/6502/index.html); [Commodore C64 Emulation](https://www.cs.jhu.edu/~phi/csf/c64-emulation/);<br> [Re-engineering the 6502 Video](https://www.youtube.com/watch?v=fWqBmmPQP40)
+Fr Sep 20 | Stack                                     | [JavaScript 6502 assembler and simulator](http://skilldrick.github.io/easy6502/)
+Mo Sep 23 | Interrupts and Bus                        | [6502 Diagram](https://www.cs.jhu.edu/~phi/csf/slides/6502-diagram-db-sb-ad.png); [Fun Glitch](https://www.youtube.com/watch?v=fj9u00PMkYU&feature=youtu.be)
           | **Midterm**
 We Sep 25 | Midterm Review                            | 
 Fr Sep 27 | Midterm
@@ -67,7 +67,7 @@ Fr Oct 18 | *Fall break, no class*
 Mo Oct 21 | Cache Policies                            | PH 5.7
 We Oct 23 | Floating Point Numbers                    | 	PH 3.5
           | **x86**
-Fr Oct 25 | x86 Introduction                          | BO 3.1, online links: 1 2 3 4 5 Intel Manual
+Fr Oct 25 | x86 Introduction                          | BO 3.1, online links: [1](http://www.cs.virginia.edu/~evans/cs216/guides/x86.html) [2](https://www.nayuki.io/page/a-fundamental-introduction-to-x86-assembly-programming) [3](http://download-mirror.savannah.gnu.org/releases//pgubook/ProgrammingGroundUp-1-0-booksize.pdf) [4](http://www.plantation-productions.com/Webster/www.artofasm.com/Windows/index.html) [5](http://patater.com/gbaguy/x86asm.htm) [Intel Manual](http://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf)
 Mo Oct 28 | Compiling C code                          | BO 3.2-3.6
 We Oct 30 | Functions and Stack                       | BO 3.7
 Fr Nov 1  | Linking                                   | BO 7
