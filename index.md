@@ -22,6 +22,10 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 
 Coming soon...
 
+## Resources
+
+**Logisim evolution (digital logic simulator)**: [web page](https://github.com/reds-heig/logisim-evolution), executable jar file download [logisim-evolution.jar](http://reds-data.heig-vd.ch/logisim-evolution/logisim-evolution.jar) (requires Java)
+
 ## Grading
 
 * Each assignment (total of 7): 10%
