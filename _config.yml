@@ -1,4 +1,5 @@
 coursename: "601.229.02 (F19)"
+coursename_common: "601.229 (F19)"
 baseurl: "/fall2019"
 markdown: kramdown
 highlighter: rouge
