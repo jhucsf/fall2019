@@ -109,7 +109,7 @@ diff expected.txt actual.txt
 If the `diff` command doesn't produce any output, then your program produced
 the same result as `xxd -g 1`.  If the `diff` command *does* produce output,
 then think about why your program behaved the way it did, and how to
-fix it.  We highly recommend that you test your program throroughly on a
+fix it.  We highly recommend that you test your program thoroughly on a
 variety of different input files.
 
 <!--
