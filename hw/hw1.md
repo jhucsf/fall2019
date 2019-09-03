@@ -3,8 +3,8 @@ layout: assignment
 title: "Homework 1: Warmup"
 ---
 
--   **Out on:** September 3, 2019
--   **Due by:** September 13, 2019 before 10:00 pm
+-   **Out on:** Tuesday, September 3, 2019
+-   **Due by:** Friday, September 13, 2019 before 10:00 pm
 -   **Collaboration:** None
 -   **Grading:** Packaging 10%, Style 10%, Design 10%, Functionality 70%
 
@@ -146,8 +146,8 @@ general submission instructions for assignments on
 **Style** refers to C programming style, including things like
 consistent indentation, appropriate identifier names, useful comments,
 suitable documentation, etc. Simple, clean, readable code is what you
-should be aiming for. Make sure you follow the style guide posted on
-[Piazza](http://piazza.com/jhu/fall2019/601229)!
+should be aiming for. <!-- Make sure you follow the style guide posted on
+[Piazza](http://piazza.com/jhu/fall2019/601229)! -->
 
 **Design** refers to proper modularization (functions, modules, etc.)
 and an appropriate choice of algorithms and data structures.
