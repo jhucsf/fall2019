@@ -7,6 +7,8 @@ title: "Home page"
 
 This web page supplements [Prof. Koehn's CSF web page](https://www.cs.jhu.edu/~phi/csf).  It is mainly intended for Section 02 of the course, taught by [David Hovemeyer](https://www.cs.jhu.edu/~daveho).
 
+We'll be using Piazza for Q&amp;A and other important information about the course: <https://piazza.com/jhu/fall2019/601220>
+
 ## Readings
 
 Recommended textbooks:
@@ -44,8 +46,8 @@ Th Aug 29 | Introduction: Electricity and Circuits ([slides](lec/lec01.pdf), [ma
           | **Digital Circuits**
 Fr Aug 30 | Boolean Algrebra ([slides](lec/lec02.pdf))| CODE Chapter 8, 15
 Mo Sep 2  | *Labor day, no class*
-We Sep 4  | Addition and Subtraction                  | CODE Chapter 12-13
-Fr Sep 6  | Feedback and Flip-Flops                   | CODE Chapter 14
+We Sep 4  | Addition and Subtraction ([slides](lec/lec03.pdf))                  | CODE Chapter 12-13
+Fr Sep 6  | Feedback and Flip-Flops ([slides](lec/lec04.pdf))                   | CODE Chapter 14
 Mo Sep 9  | Memory                                    | CODE Chapter 16
 We Sep 11 | Instructions                              | CODE Chapter 17
           | **SCRAM**
