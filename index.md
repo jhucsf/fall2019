@@ -22,7 +22,7 @@ Recommended textbooks:
 
 Homework assignments are based on assignments designed by [Peter Froehlich](https://www.cs.jhu.edu/~phf) for [his version of the class](https://www.cs.jhu.edu/~phf/2018/fall/cs229/).
 
-Coming soon...
+[Homework 1: Warmup](hw/hw1.html), due Friday, Sep 13th by 10pm
 
 ## Resources
 
