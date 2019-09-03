@@ -44,7 +44,7 @@ Date      | Topic                                     | Readings
 --------- | ----------------------------------------- | --------
 Th Aug 29 | Introduction: Electricity and Circuits ([slides](lec/lec01.pdf), [markup](lec/lec01-ink.pdf))    | CODE Chapters 4, 8, 10, 11; HCW page basic 1, basic 4
           | **Digital Circuits**
-Fr Aug 30 | Boolean Algrebra ([slides](lec/lec02.pdf), [markup](lec/lec02-ink.pdf))| CODE Chapter 8, 15
+Fr Aug 30 | Boolean Algrebra ([slides](lec/lec02.pdf), [markup](lec/lec02-ink.pdf), [note about CNF](notes/cnf.html))| CODE Chapter 8, 15
 Mo Sep 2  | *Labor day, no class*
 We Sep 4  | Addition and Subtraction ([slides](lec/lec03.pdf))                  | CODE Chapter 12-13
 Fr Sep 6  | Feedback and Flip-Flops ([slides](lec/lec04.pdf))                   | CODE Chapter 14
