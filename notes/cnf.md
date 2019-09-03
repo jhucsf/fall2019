@@ -35,7 +35,7 @@ Let's dive deeper into the subexpression for the first row (where A, B, and C ar
 
 > NOT ((NOT A) AND (NOT B) AND (NOT C))
 
-It's 0 when A, B, and C are each 0, false otherwise.  Another way to think about the meaning of this expression is
+It's 0 when A, B, and C are each 0, 1 otherwise.  Another way to think about the meaning of this expression is
 
 > "Not the first row of the truth table"
 
