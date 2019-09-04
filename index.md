@@ -46,7 +46,7 @@ Th Aug 29 | Introduction: Electricity and Circuits ([slides](lec/lec01.pdf), [ma
           | **Digital Circuits**
 Fr Aug 30 | Boolean Algrebra ([slides](lec/lec02.pdf), [markup](lec/lec02-ink.pdf), [note about CNF](notes/cnf.html))| CODE Chapter 8, 15
 Mo Sep 2  | *Labor day, no class*
-We Sep 4  | Addition and Subtraction ([slides](lec/lec03.pdf))                  | CODE Chapter 12-13
+We Sep 4  | Addition and Subtraction ([slides](lec/lec03.pdf), [markup](lec/lec03-ink.pdf))                  | CODE Chapter 12-13
 Fr Sep 6  | Feedback and Flip-Flops ([slides](lec/lec04.pdf))                   | CODE Chapter 14
 Mo Sep 9  | Memory                                    | CODE Chapter 16
 We Sep 11 | Instructions                              | CODE Chapter 17
