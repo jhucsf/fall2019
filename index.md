@@ -7,7 +7,7 @@ title: "Home page"
 
 This web page supplements [Prof. Koehn's CSF web page](https://www.cs.jhu.edu/~phi/csf).  It is mainly intended for Section 02 of the course, taught by [David Hovemeyer](https://www.cs.jhu.edu/~daveho).
 
-We'll be using Piazza for Q&amp;A and other important information about the course: <https://piazza.com/jhu/fall2019/601220>
+We'll be using Piazza for Q&amp;A and other important information about the course: <https://piazza.com/jhu/fall2019/601229>
 
 ## Readings
 
