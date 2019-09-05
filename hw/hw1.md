@@ -8,6 +8,9 @@ title: "Homework 1: Warmup"
 -   **Collaboration:** None
 -   **Grading:** Packaging 10%, Style 10%, Design 10%, Functionality 70%
 
+*Update September 5th*: Clarified [program exit code](#error-handling) and
+[packaging/Makefile](#submitting) requirements.
+
 Acknowledgment
 --------------
 
@@ -74,6 +77,15 @@ course ignore the starter code and write the entire thing from scratch
 yourself, but we recommend you use the starter code: It contains a few
 important hints that you may not want to live without. Good luck!
 
+### Error handling
+
+Any run-time errors, including (but not limited to) failing to open
+the input file, or failing to read data from the data input source,
+should be handled by printing an error message to `stderr` and exiting
+the program with an exit code of 1. (An exit code is the value returned
+by the program's `main` function, or the value passed to the standard
+library `exit` function.)
+
 ### Hints
 
 -   You can use the existing `xxd` program to check your output against.
@@ -127,9 +139,23 @@ makes sense to do so anyway)!**
 Submitting
 ----------
 
-Submit the assignment to [Gradescope](https://www.gradescope.com/courses/61318).  Specifically, upload a zipfile containing *all files necessary to compile your submission* as **HW1**.  See the "Homework submission" link in the "General resources" section of the [Piazza](http://piazza.com/jhu/fall2019/601229) Resources page for more details.
+Submit the assignment to [Gradescope](https://www.gradescope.com/courses/61318).
+Specifically, upload a zipfile containing *all files necessary
+to compile your submission* as **HW1**.  See the "Homework
+submission" link in the "General resources" section of the
+[Piazza](http://piazza.com/jhu/fall2019/601229) Resources page for
+more details.
 
 If you base your code on the starter project posted on Piazza (`hw1_skeleton.zip`), then you should be able to run the command `make solution.zip` and then upload the resulting `solution.zip`.
+
+**Important packaging requirements**: Your program code should be in a
+single C source file called `hex.c`.  Your `Makefile` (which should be included
+in your submission) should build an executable called `hex` as its default
+target: i.e., running the `make` command in the directory with your
+extracted submission files should result in compiling your code and producing
+an executable called `hex`.  If you base your solution on the starter
+code, then you shouldn't need to do anything special to meet these
+requirements.
 
 Grading
 -------
