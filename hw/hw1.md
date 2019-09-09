@@ -8,6 +8,8 @@ title: "Homework 1: Warmup"
 -   **Collaboration:** None
 -   **Grading:** Packaging 10%, Style 10%, Design 10%, Functionality 70%
 
+*Update September 9th*: Link to [Coding style guidlines](../notes/style.html).
+
 *Update September 5th*: Clarified [program exit code](#error-handling) and
 [packaging/Makefile](#submitting) requirements.
 
@@ -172,8 +174,7 @@ general submission instructions for assignments on
 **Style** refers to C programming style, including things like
 consistent indentation, appropriate identifier names, useful comments,
 suitable documentation, etc. Simple, clean, readable code is what you
-should be aiming for. <!-- Make sure you follow the style guide posted on
-[Piazza](http://piazza.com/jhu/fall2019/601229)! -->
+should be aiming for. Please see the [Coding style guidelines](../notes/style.html).
 
 **Design** refers to proper modularization (functions, modules, etc.)
 and an appropriate choice of algorithms and data structures.
