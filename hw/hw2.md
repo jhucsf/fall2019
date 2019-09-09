@@ -57,7 +57,7 @@ A B C | Q
 
 **(b)** Design a circuit which implements your DNF formula from part (a) using logic gates (AND, OR, NOT).  Your circuit should implement the formula in a straightforward manner.  "Straightforward" means that, *generally*, each operator in the formula should be a distinct gate in the circuit.  Two simplifications which you *may* make are
 
-1. You can use a single NOT gate per input to generate the negated versions of A, B, and C
+1. You can use a single NOT gate per input to generate the negated versions of A, B, and C as needed
 2. You can use AND and OR gates with more than 2 inputs
 
 # Problem 3
