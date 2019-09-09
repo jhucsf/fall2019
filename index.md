@@ -51,8 +51,8 @@ Fr Sep 6  | Feedback and Flip-Flops ([slides](lec/lec04.pdf), [markup](lec/lec04
 Mo Sep 9  | Memory ([slides](lec/lec05.pdf))          | CODE Chapter 16
 We Sep 11 | Instructions ([slides](lec/lec06.pdf))    | CODE Chapter 17
           | **SCRAM**
-Fr Sep 13 | SCRAM Introduction                        | [SCRAM handout](https://www.cs.jhu.edu/~phi/csf/scram/dewdney-omnibus-scram.pdf)
-Mo Sep 16 | SCRAM Instructions                        | 
+Fr Sep 13 | SCRAM Introduction ([slides](lec/lec07.pdf))                        | [SCRAM handout](https://www.cs.jhu.edu/~phi/csf/scram/dewdney-omnibus-scram.pdf)
+Mo Sep 16 | SCRAM Instructions ([slides](lec/lec08.pdf))                        | 
           | **6502**
 We Sep 18 | Introduction                              | [Reference](http://obelisk.me.uk/6502/index.html); [Commodore C64 Emulation](https://www.cs.jhu.edu/~phi/csf/c64-emulation/);<br> [Re-engineering the 6502 Video](https://www.youtube.com/watch?v=fWqBmmPQP40)
 Fr Sep 20 | Stack                                     | [JavaScript 6502 assembler and simulator](http://skilldrick.github.io/easy6502/)
