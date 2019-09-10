@@ -16,6 +16,10 @@ In this assignment, you will work on four problems related to digital logic desi
 
 Please make sure you read the [Submitting](#submitting) section carefully, since it specifies how you should prepare your answer to each problem, and how you should package your answers to be submitted to Gradescope.
 
+## Expectation of original work
+
+You could no doubt find answers to all of these problems on the web.  Please resist the temptation to do this, and understand that turning in work that is not your original work is a violation of academic integrity.  All of these problems have straightforward solutions that you should be able to work out with a bit of thought and effort.
+
 # Problem 1: Counting boolean functions (10%)
 
 An *n*-input boolean function takes *n* input bits and produces one output bit for each combination of input bits.  A boolean function can be specified precisely by writing a truth table, which specifies the output bit produced for each combination of input bits.
@@ -78,6 +82,8 @@ The priority encoder outputs the number (1, 2, or 3) of the "highest priority" i
 **(b)** Design a circuit which implements the formulas you specified in part (a).  The circuit should show the three inputs (I1, I2, I3) and the two outputs (Q0, Q1).
 
 Hint: it will probably be helpful to make a truth table showing the values of Q0 and Q1 for each combination of input values.
+
+Hint: it is possible to implement this circuit using 4 gates.  (Your solution could use a different number of gates, but knowing that it has a relatively simple implementation may be helpful in getting a sense of whether your approach is heading in the right direction.)
 
 # Problem 4: Shift register (30%)
 
