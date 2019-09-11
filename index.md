@@ -51,7 +51,7 @@ Mo Sep 2  | *Labor day, no class*
 We Sep 4  | Addition and Subtraction ([slides](lec/lec03.pdf), [markup](lec/lec03-ink.pdf))                  | CODE Chapter 12-13
 Fr Sep 6  | Feedback and Flip-Flops ([slides](lec/lec04.pdf), [markup](lec/lec04-ink.pdf), [logisim circuits](res/demoSequentialLogic.circ))                   | CODE Chapter 14
 Mo Sep 9  | Memory ([slides](lec/lec05.pdf), [markup](lec/lec05-ink.pdf), [logisim circuits](res/demoMemory.circ))          | CODE Chapter 16
-We Sep 11 | Instructions ([slides](lec/lec06.pdf))    | CODE Chapter 17
+We Sep 11 | Instructions ([slides](lec/lec06.pdf), [markup](lec/lec06-ink.pdf), [logisim circuits](res/demoInstructions.circ))    | CODE Chapter 17
           | **SCRAM**
 Fr Sep 13 | SCRAM Introduction ([slides](lec/lec07.pdf))                        | [SCRAM handout](https://www.cs.jhu.edu/~phi/csf/scram/dewdney-omnibus-scram.pdf)
 Mo Sep 16 | SCRAM Instructions ([slides](lec/lec08.pdf))                        | 
