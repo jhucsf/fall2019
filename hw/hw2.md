@@ -3,12 +3,10 @@ layout: assignment
 title: "Homework 2: Digital Logic"
 ---
 
--   **Out on:** Wednesday, Sep 11th (?)
--   **Due by:** Friday, Sep 20th by 10pm (?)
+-   **Out on:** Wednesday, Sep 11th
+-   **Due by:** Friday, Sep 20th by 10pm
 -   **Collaboration:** None
 -   **Grading:** Functionality 80%, Design 10%, Packaging 10%
-
-*Preliminary assignment description, this could change*
 
 # Overview
 
@@ -116,9 +114,9 @@ Your circuit may show the R0 through R7 flip-flops as a single 8-bit register wi
 
 Prepare your answers for each problem as follows.
 
-For the *written* problems (Problems 1 and 2a), prepare either a *plain text file* or a *PDF file* with your solution.  The file should be named <code>Problem<i>N</i>.txt</code> or <code>Problem<i>N</i>.pdf</code>, where *N* is the problem number (1 or 2a).
+For the *written* problems (Problems 1 and 2a), prepare either a *plain text file* (with the extension ".txt") or a *PDF file* (with the extension ".pdf") with your solution.  The file should be named <code>Problem<i>N</i>.txt</code> or <code>Problem<i>N</i>.pdf</code>, where *N* is the problem number (1 or 2a).
 
-For the problems where you are asked to design a circuit (Problems 2b, 3, and 4), perpare either a [Logisim evolution](https://github.com/reds-heig/logisim-evolution) file or a *neatly drawn* diagram in PDF format.  The file should be named <code>Problem<i>N</i>Circuit.circ</code> or <code>Problem<i>N</i>Circuit.pdf</code>, where *N* is the problem number (2b, 3, or 4).
+For the problems where you are asked to design a circuit (Problems 2b, 3, and 4), prepare either a [Logisim evolution](https://github.com/reds-heig/logisim-evolution) file (with the extension ".circ") or a *neatly drawn* diagram in PDF format (with the extension ".pdf").  The file should be named <code>Problem<i>N</i>Circuit.circ</code> or <code>Problem<i>N</i>Circuit.pdf</code>, where *N* is the problem number (2b, 3, or 4).
 
 We highly recommend using Logisim evolution for the circuit design problems, since it will allow you to test your work interactively!
 

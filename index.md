@@ -24,6 +24,8 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 
 [Homework 1: Warmup](hw/hw1.html), due Friday, Sep 13th by 10pm
 
+[Homework 2: Digital Logic](hw/hw2.html), due Friday, Sep 20th by 10pm
+
 ## Resources
 
 **Logisim evolution (digital logic simulator)**: [web page](https://github.com/reds-heig/logisim-evolution), executable jar file download [logisim-evolution.jar](http://reds-data.heig-vd.ch/logisim-evolution/logisim-evolution.jar) (requires Java)
