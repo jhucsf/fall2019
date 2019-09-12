@@ -28,7 +28,13 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 
 ## Resources
 
-**Logisim evolution (digital logic simulator)**: [web page](https://github.com/reds-heig/logisim-evolution), executable jar file download [logisim-evolution.jar](http://reds-data.heig-vd.ch/logisim-evolution/logisim-evolution.jar) (requires Java)
+**Logisim evolution (digital logic simulator)**:
+
+* [Logisim evolution web page](https://github.com/reds-heig/logisim-evolution)
+* Executable jar file download [logisim-evolution.jar](http://reds-data.heig-vd.ch/logisim-evolution/logisim-evolution.jar) (requires Java)
+* [Beginner's tutorial](http://www.cburch.com/logisim/docs/2.1.0/guide/tutorial/index.html): for older version of Logisim, but definitely still relevant
+* [Youtube video #1](https://www.youtube.com/watch?v=1IEEYddYIxg): shows wiring and testing a very simple circuit
+* [Youtube video #2](https://www.youtube.com/watch?v=WDq5L0xeSnY): another good introductory video on using Logisim evolution
 
 ## Grading
 

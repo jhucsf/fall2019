@@ -8,6 +8,8 @@ title: "Homework 2: Digital Logic"
 -   **Collaboration:** None
 -   **Grading:** Functionality 80%, Design 10%, Packaging 10%
 
+*Update 9/12*: Links to [resources for using Logisim evolution](../index.html#resources) are available.
+
 # Overview
 
 In this assignment, you will work on four problems related to digital logic design, which we covered in Lectures 1–5.
@@ -17,6 +19,10 @@ Please make sure you read the [Submitting](#submitting) section carefully, since
 ## Expectation of original work
 
 You could no doubt find answers to all of these problems on the web.  Please resist the temptation to do this, and understand that turning in work that is not your original work is a violation of academic integrity.  All of these problems have straightforward solutions that you should be able to work out with a bit of thought and effort.
+
+## Logisim resources
+
+See the [Resources](../index.html#resources) section of the Sec 02 CSF web page for some useful information and tutorials to help you use [Logisim evolution](https://github.com/reds-heig/logisim-evolution), which is recommended for the digital design problems (2b, 3, and 4).
 
 # Problem 1: Counting boolean functions (10%)
 
