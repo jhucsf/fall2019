@@ -44,6 +44,8 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 
 Assignment late policy: 5% deduction for each day.
 
+Note also the [late days policy](notes/latedays.html).
+
 ## Schedule
 
 The schedule is tentative and subject to change.  Any changes will be announced in class.
