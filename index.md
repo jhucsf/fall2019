@@ -64,9 +64,9 @@ We Sep 11 | Instructions ([slides](lec/lec06.pdf), [markup](lec/lec06-ink.pdf), 
 Fr Sep 13 | SCRAM Introduction ([slides](lec/lec07.pdf), [markup](lec/lec07-ink.pdf), [logisim circuits](res/demoSCRAM.circ))                        | [SCRAM handout](https://www.cs.jhu.edu/~phi/csf/scram/dewdney-omnibus-scram.pdf)
 Mo Sep 16 | SCRAM Instructions ([slides](lec/lec08.pdf))                        | 
           | **6502**
-We Sep 18 | Introduction                              | [Reference](http://obelisk.me.uk/6502/index.html); [Commodore C64 Emulation](https://www.cs.jhu.edu/~phi/csf/c64-emulation/);<br> [Re-engineering the 6502 Video](https://www.youtube.com/watch?v=fWqBmmPQP40)
-Fr Sep 20 | Stack                                     | [JavaScript 6502 assembler and simulator](http://skilldrick.github.io/easy6502/)
-Mo Sep 23 | Interrupts and Bus                        | [6502 Diagram](https://www.cs.jhu.edu/~phi/csf/slides/6502-diagram-db-sb-ad.png); [Fun Glitch](https://www.youtube.com/watch?v=fj9u00PMkYU&feature=youtu.be)
+We Sep 18 | Introduction ([slides](lec/lec09.pdf))                            | [Reference](http://obelisk.me.uk/6502/index.html); [Commodore C64 Emulation](https://www.cs.jhu.edu/~phi/csf/c64-emulation/);<br> [Re-engineering the 6502 Video](https://www.youtube.com/watch?v=fWqBmmPQP40)
+Fr Sep 20 | Stack ([slides](lec/lec10.pdf))                                     | [JavaScript 6502 assembler and simulator](http://skilldrick.github.io/easy6502/)
+Mo Sep 23 | Interrupts and Bus ([slides](lec/lec11.pdf))                     | [6502 Diagram](https://www.cs.jhu.edu/~phi/csf/slides/6502-diagram-db-sb-ad.png); [Fun Glitch](https://www.youtube.com/watch?v=fj9u00PMkYU&feature=youtu.be)
           | **Midterm**
 We Sep 25 | Midterm Review                            | 
 Fr Sep 27 | Midterm
