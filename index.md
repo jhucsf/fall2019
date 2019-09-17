@@ -36,6 +36,8 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 * [Youtube video #1](https://www.youtube.com/watch?v=1IEEYddYIxg): shows wiring and testing a very simple circuit
 * [Youtube video #2](https://www.youtube.com/watch?v=WDq5L0xeSnY): another good introductory video on using Logisim evolution
 
+**C64 and 6502 resources**: see the [C64 and 6502 resources page](c64.html)
+
 ## Grading
 
 * Each assignment (total of 7): 10%
