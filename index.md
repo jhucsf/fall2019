@@ -42,9 +42,7 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 * Midterm: 10%
 * Final exam: 20%
 
-Assignment late policy: 5% deduction for each day.
-
-Note also the [late days policy](notes/latedays.html).
+Note also the [late days policy](notes/latedays.html).  There is no grade deduction for a late submission as long as you are using one of the late days to which you're entitled.
 
 ## Schedule
 
