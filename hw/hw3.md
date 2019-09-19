@@ -57,13 +57,43 @@ The simulator shows the initial machine state (labeled `Start:`), and then shows
 
 You can use the `-DmaxCycles=` option to specify an upper limit on the number of program instructions to be executed.  This is useful in case your code has a runaway loop.
 
-Your submission for this problem should be a single plain text file called `Problem1.txt` containing a sequence of hexadecimal bytes (i.e., the initial memory contents.)  For example, if you were submitting a program to add the numbers 17 and 42 and store the sum at address $F (which you're obviously not, this is just an example of what we want to see!), the contents of your `Problem1.txt` might be:
+The first component of your submission for this problem should be a plain text file called `Problem1MachineCode.txt` containing a sequence of hexadecimal bytes (i.e., the initial memory contents.)  For example, if you were submitting a program to add the numbers 17 and 42 and store the sum at address $F (which you're obviously not, this is just an example of what we want to see!), the contents of your `Problem1MachineCode.txt` might be:
 
 ```
 1D 5E 3F 00 00 00 00 00 00 00 00 00 00 11 2A 00
 ```
 
+**Extremely important**: `Problem1MachineCode.txt` should contain *only* memory content bytes.  Do *not* put your name and email address in this file!
+
 Note that you can specify whatever data values you want for the operands at addresses $D and $E.  However, you should assume that we will test your program with a variety of data values, by changing the values stored at these locations.
+
+You should also submit a plain text file called `Problem1AssemblyCode.txt` that contains an assembly language version of your program.  For example, the assembly language for the 17+42 program might look like this:
+
+```
+J. Student
+jstuden1@jhu.edu
+
+                     ; Awesome SCRAM program to compute 17+42
+
+0: 1D        LDA D   ; load first operand to accumulator
+1: 5E        ADD E   ; add second operand to accumulator
+2: 3F        STA F   ; store sum at $F
+3: 00        HLT     ; end of program
+4: 00                ; unused
+5: 00                ; unused
+6: 00                ; unused
+7: 00                ; unused
+8: 00                ; unused
+9: 00                ; unused
+A: 00                ; unused
+B: 00                ; unused
+C: 00                ; unused
+D: 11                ; data operand 1
+E: 2A                ; data operand 2
+F: 00                ; storage for sum
+```
+
+The exact format of your assembly code listing isn't critical, but it should indicate the encoding of each code and data byte, and show the assembly code for bytes containing program instructions.
 
 # Problem 2: SCRAM disassembler
 
