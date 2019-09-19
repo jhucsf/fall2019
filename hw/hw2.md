@@ -134,7 +134,7 @@ For the circuit design problems:
 Package all of the files you have prepared for the problems (note that there are *two* files for Problem 2) into a single zip file.  All of the files should be added to the top-level of the zip file (i.e., not in a subdirectory.)  For example, the command you use to prepare the zip file might be
 
 ```
-zip hw2.zip Problem1.txt Problem2a.txt Problem2bCircuit.circ Problem3Circuit.circ Problem4Circuit.circ
+zip hw2.zip Problem1.txt Problem2a.txt Problem2bCircuit.circ Problem3a.txt Problem3Circuit.circ Problem4Circuit.circ
 ```
 
 Submit your zipfile to Gradescope as **HW2**.
