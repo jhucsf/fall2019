@@ -10,6 +10,8 @@ title: "Homework 2: Digital Logic"
 
 *Update 9/12*: Links to [resources for using Logisim evolution](../index.html#resources) are available.
 
+*Update 9/19*: Update example `zip` command in [Submission](#submitting) instructions to include Problem 3a (which can be a text file or a PDF file)
+
 # Overview
 
 In this assignment, you will work on four problems related to digital logic design, which we covered in Lectures 1–5.
