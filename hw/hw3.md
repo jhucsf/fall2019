@@ -99,11 +99,11 @@ The exact format of your assembly code listing isn't critical, but it should ind
 
 Coming soon!
 
-# Problem 3: 6502 programming (40%)
+# Problem 3: 6502 programming (45%)
 
 In this problem you will write some 6502 assembly language subroutines.
 
-Each assembly language program should be in a text file called <tt>Problem3<i>X</i>.asm</tt>, where <tt><i>X</i></tt> is the subproblem (`a`, `b`, or `c`.)
+Each assembly language program should be in a text file called <tt>Problem3<i>X</i>.asm</tt>, where <tt><i>X</i></tt> is the subproblem (`a` or `b`.)
 
 All of your assembly subroutines must assemble and run correctly in [Easy 6502](https://skilldrick.github.io/easy6502/).
 
@@ -132,17 +132,9 @@ JSR right_shift_n
 ; at this point, A will contain the value $17
 ```
 
-**(c)** Write a subroutine called `right_shift_quad`.  The argument passed in the `X` register is a zero-page address (in the range $00-$FF).  The 2-byte value at this address is a pointer to a four byte little-endian data value.  The subroutine should shift this value to the right by one bit.
+# Problem 4: SCRAM hardware (5% extra credit!)
 
-For example:
-
-```
-; TODO: test code
-```
-
-# Problem 4: SCRAM hardware (5%)
-
-Note that this problem is only worth 5%, but will likely be more work than any of the other problems.  So, work on it only after you've completed the other problems.
+This is an extra credit problem!  Make sure you complete the other problems before attempting this problem.
 
 The Logisim evolution file [demoSCRAM2.circ](../res/demoSCRAM2.circ) contains a partial implementation of the SCRAM machine, in the circuit called "SCRAM7".
 
