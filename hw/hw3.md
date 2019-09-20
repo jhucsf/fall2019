@@ -109,7 +109,28 @@ Each assembly language program should be in a text file called <tt>Problem3<i>X<
 
 All of your assembly subroutines must assemble and run correctly in [Easy 6502](https://skilldrick.github.io/easy6502/).
 
-*TODO*: note about how to scaffold for testing, using editor and copy and pasting to Easy 6502, etc.
+When testing each routine, you will find it useful to add test setup code.  For example, lets say you're writing a subroutine called `addfortytwo` whose purpose is to add 42 to the parameter `X` and return the sum in the accumulator.  Your test code and function might look like this:
+
+```
+entry:
+    LDA #$11      ; test data value
+    TAX           ; put test data value in X
+    JSR addfortytwo
+    BRK
+
+; Return the value of X plus 42 in the accumulator.
+addfortytwo:
+    TXA            ; put arg in accumulator
+    CLC            ; clear carry flag
+    ADC #$2A       ; add 42 to accumulator
+    RTS
+```
+
+If you paste this code into Easy 6502, the click **Assemble** followed by **Run**, you will see this:
+
+> ![Easy 6502 screenshot](img/easy6502.png)
+
+Note how the value of the `A` (accumulator) register is $3b (decimal 59), and is the correct sum of the test data value $11 (decimal 17) and 42.
 
 **(a)** Write a subroutine called `popcount`.  It should return (in the accumulator) the total number of bits in the `X` register that are set to 1.
 
