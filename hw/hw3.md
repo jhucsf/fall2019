@@ -101,7 +101,7 @@ Coming soon!
 
 # Problem 3: 6502 programming (45%)
 
-In this problem you will write some 6502 assembly language subroutines.
+In this problem you will write two 6502 assembly language subroutines.
 
 Each assembly language program should be in a text file called <tt>Problem3<i>X</i>.asm</tt>, where <tt><i>X</i></tt> is the subproblem (`a` or `b`.)
 
