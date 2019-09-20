@@ -44,7 +44,7 @@ For <code><i>initial memory contents</i></code>, specify a sequence of byte valu
 As an example, here is the simulator running a program that adds the values 17 and 42, then stores the sum in memory location $F (15):
 
 ```
-java -DmaxCycles=1000 -jar scram.jar "1D 5E 3F 00 00 00 00 00 00 00 00 00 00 11 2A 00"
+$ java -DmaxCycles=1000 -jar scram.jar "1D 5E 3F 00 00 00 00 00 00 00 00 00 00 11 2A 00"
 Start: 1d 5e 3f 00 00 00 00 00 00 00 00 00 00 11 2a 00 A=00 PC=0
 0000 : 1d 5e 3f 00 00 00 00 00 00 00 00 00 00 11 2a 00 A=11 PC=1
 0001 : 1d 5e 3f 00 00 00 00 00 00 00 00 00 00 11 2a 00 A=3b PC=2
