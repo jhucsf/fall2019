@@ -255,7 +255,7 @@ Submit your work for this problem in a file called `Problem4.circ`, which is you
 
 # Submitting
 
-Prepare a zipfile with your files and upload it to Gradescope as **HW3**.
+Prepare a zipfile with your files and upload it to Gradescope as **HW3**.  Make sure your files are in the top level of the zipfile, i.e., they should not be in a subdirectory.
 
 If you did not do Problem 4 (the extra credit problem), then you should use the command
 
