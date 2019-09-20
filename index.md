@@ -67,13 +67,14 @@ Mo Sep 16 | SCRAM Instructions ([slides](lec/lec08.pdf), [logisim circuits](res/
 We Sep 18 | Introduction ([slides](lec/lec09.pdf), [markup](lec/lec09-ink.pdf))                            | [Reference](http://obelisk.me.uk/6502/index.html); [Commodore C64 Emulation](https://www.cs.jhu.edu/~phi/csf/c64-emulation/);<br> [Re-engineering the 6502 Video](https://www.youtube.com/watch?v=fWqBmmPQP40)
 Fr Sep 20 | Stack ([slides](lec/lec10.pdf))                                     | [JavaScript 6502 assembler and simulator](http://skilldrick.github.io/easy6502/)
 Mo Sep 23 | Interrupts and Bus ([slides](lec/lec11.pdf))                     | [6502 Diagram](https://www.cs.jhu.edu/~phi/csf/slides/6502-diagram-db-sb-ad.png); [Fun Glitch](https://www.youtube.com/watch?v=fj9u00PMkYU&feature=youtu.be)
-          | **Midterm**
-We Sep 25 | Midterm Review                            | 
-Fr Sep 27 | Midterm
           | **MIPS**
-Mo Sep 30 | Introduction                              | PH 2.1-2.3, 2.5-2.7
-We Oct 2  | Fast Arithmetic                           | PH 2.10, 3.3, 3.
-Fr Oct 4  | Pseudo Instructions and Functions         | PH 2.8
+We Sep 25 | Introduction                              | PH 2.1-2.3, 2.5-2.7
+Fr Sep 27 | Fast Arithmetic                           | PH 2.10, 3.3, 3.4
+Mo Sep 30  | Pseudo Instructions and Functions         | PH 2.8
+          | **Midterm**
+We Oct 2 | Midterm Review                            | 
+Fr Oct 4 | Midterm
+          | **MIPS** (continued)
 Mo Oct 7  | Pipelining                                | PH 4.5-4.6
 We Oct 9  | Data Hazards                              | PH 4.7
 Fr Oct 11 | Branch Prediction                         | PH 4.8-4.9
