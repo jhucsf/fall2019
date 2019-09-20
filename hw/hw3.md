@@ -8,6 +8,8 @@ title: "Homework 3: Machine-level Programming"
 -   **Collaboration:** None
 -   **Grading:** Packaging 10%, Style 10%, Design 10%, Functionality 70%
 
+**Note**: We will be posting solutions to this assignment on Tuesday, Oct 1st, so you may not use more than four late days on this assignment.
+
 *Preliminary assignment description, this is imcomplete and could definitely change*
 
 # Overview
