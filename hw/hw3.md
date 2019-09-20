@@ -57,7 +57,7 @@ The simulator shows the initial machine state (labeled `Start:`), and then shows
 
 You can use the `-DmaxCycles=` option to specify an upper limit on the number of program instructions to be executed.  This is useful in case your code has a runaway loop.
 
-The first component of your submission for this problem should be a plain text file called `Problem1MachineCode.txt` containing a sequence of hexadecimal bytes (i.e., the initial memory contents.)  For example, if you were submitting a program to add the numbers 17 and 42 and store the sum at address $F (which you're obviously not, this is just an example of what we want to see!), the contents of your `Problem1MachineCode.txt` might be:
+The first component of your submission for this problem should be a plain text file called `Problem1MachineCode.txt` containing a sequence of hexadecimal bytes (i.e., the initial memory contents.)  For example, if you were submitting a program to add the numbers 17 and 42 and store the sum at address $F (which you're obviously not, this is just an example of the expected format!), the contents of your `Problem1MachineCode.txt` might be:
 
 ```
 1D 5E 3F 00 00 00 00 00 00 00 00 00 00 11 2A 00
