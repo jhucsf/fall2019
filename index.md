@@ -70,9 +70,9 @@ We Sep 18 | Introduction ([slides](lec/lec09.pdf), [markup](lec/lec09-ink.pdf)) 
 Fr Sep 20 | Stack ([slides](lec/lec10.pdf), [markup](lec/lec10-ink.pdf))                                     | [JavaScript 6502 assembler and simulator](http://skilldrick.github.io/easy6502/)
 Mo Sep 23 | Interrupts and Bus ([slides](lec/lec11.pdf))                     | [6502 Diagram](https://www.cs.jhu.edu/~phi/csf/slides/6502-diagram-db-sb-ad.png); [Fun Glitch](https://www.youtube.com/watch?v=fj9u00PMkYU&feature=youtu.be)
           | **MIPS**
-We Sep 25 | Introduction                              | PH 2.1-2.3, 2.5-2.7
-Fr Sep 27 | Fast Arithmetic                           | PH 2.10, 3.3, 3.4
-Mo Sep 30  | Pseudo Instructions and Functions         | PH 2.8
+We Sep 25 | Introduction ([slides](lec/lec12.pdf))                              | PH 2.1-2.3, 2.5-2.7
+Fr Sep 27 | Fast Arithmetic ([slides](lec/lec13.pdf))                          | PH 2.10, 3.3, 3.4
+Mo Sep 30  | Pseudo Instructions and Functions ([slides](lec/lec14.pdf))        | PH 2.8
           | **Midterm**
 We Oct 2 | Midterm Review                            | 
 Fr Oct 4 | Midterm
