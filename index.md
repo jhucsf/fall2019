@@ -68,7 +68,7 @@ Mo Sep 16 | SCRAM Instructions ([slides](lec/lec08.pdf), [logisim circuits](res/
           | **6502**
 We Sep 18 | Introduction ([slides](lec/lec09.pdf), [markup](lec/lec09-ink.pdf))                            | [Reference](http://obelisk.me.uk/6502/index.html); [Commodore C64 Emulation](https://www.cs.jhu.edu/~phi/csf/c64-emulation/);<br> [Re-engineering the 6502 Video](https://www.youtube.com/watch?v=fWqBmmPQP40)
 Fr Sep 20 | Stack ([slides](lec/lec10.pdf), [markup](lec/lec10-ink.pdf))                                     | [JavaScript 6502 assembler and simulator](http://skilldrick.github.io/easy6502/)
-Mo Sep 23 | Interrupts and Bus ([slides](lec/lec11.pdf))                     | [6502 Diagram](https://www.cs.jhu.edu/~phi/csf/slides/6502-diagram-db-sb-ad.png); [Fun Glitch](https://www.youtube.com/watch?v=fj9u00PMkYU&feature=youtu.be)
+Mo Sep 23 | Interrupts and Bus ([slides](lec/lec11.pdf), [markup](lec/lec11-ink.pdf))                     | [6502 Diagram](https://www.cs.jhu.edu/~phi/csf/slides/6502-diagram-db-sb-ad.png); [Fun Glitch](https://www.youtube.com/watch?v=fj9u00PMkYU&feature=youtu.be)
           | **MIPS**
 We Sep 25 | Introduction ([slides](lec/lec12.pdf))                              | PH 2.1-2.3, 2.5-2.7
 Fr Sep 27 | Fast Arithmetic ([slides](lec/lec13.pdf))                          | PH 2.10, 3.3, 3.4
