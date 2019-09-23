@@ -227,7 +227,7 @@ For example:
 ```
 LDA #$02    ; shift right by 2 bits
 TAX         ; put the shift amount in the X register
-LDA #5C     ; put the data value $5C in the accumulator
+LDA #$5C    ; put the data value $5C in the accumulator
 JSR right_shift_n
 ; at this point, A will contain the value $17
 ```
