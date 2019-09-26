@@ -74,7 +74,7 @@ We Sep 25 | Introduction ([slides](lec/lec12.pdf), [markup](lec/lec12-ink.pdf)) 
 Fr Sep 27 | Fast Arithmetic ([slides](lec/lec13.pdf))                          | PH 2.10, 3.3, 3.4
 Mo Sep 30  | Pseudo Instructions and Functions ([slides](lec/lec14.pdf))        | PH 2.8
           | **Midterm**
-We Oct 2 | Midterm Review                            | 
+We Oct 2 | Midterm Review                            | [Midterm 2016](res/midterm2016.pdf)
 Fr Oct 4 | Midterm
           | **MIPS** (continued)
 Mo Oct 7  | Pipelining                                | PH 4.5-4.6
