@@ -10,6 +10,8 @@ title: "Homework 3: Machine-level Programming"
 
 **Note**: We will be posting solutions to this assignment on Tuesday, Oct 1st, so you may not use more than four late days on this assignment.
 
+*Update 9/26*: clarified that the `right_shift_n` subroutine should shift in 0 bits (i.e., it is a logical shift)
+
 # Overview
 
 In this assignment you will write machine-level programs for the SCRAM and 6502 and a disassembler for the SCRAM system.
@@ -231,6 +233,8 @@ LDA #$5C    ; put the data value $5C in the accumulator
 JSR right_shift_n
 ; at this point, A will contain the value $17
 ```
+
+Note that the bits shifted into the accumulator (as the new high bits) should all be zero.  This implies that if the value passed in the `X` register is 8 or greater, then `A` will be 0 when the subroutine returns.
 
 # Problem 4: SCRAM hardware (5% extra credit!)
 
