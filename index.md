@@ -71,7 +71,7 @@ Fr Sep 20 | Stack ([slides](lec/lec10.pdf), [markup](lec/lec10-ink.pdf))        
 Mo Sep 23 | Interrupts and Bus ([slides](lec/lec11.pdf), [markup](lec/lec11-ink.pdf))                     | [6502 Diagram](https://www.cs.jhu.edu/~phi/csf/slides/6502-diagram-db-sb-ad.png); [Fun Glitch](https://www.youtube.com/watch?v=fj9u00PMkYU&feature=youtu.be)
           | **MIPS**
 We Sep 25 | Introduction ([slides](lec/lec12.pdf), [markup](lec/lec12-ink.pdf))                              | PH 2.1-2.3, 2.5-2.7
-Fr Sep 27 | Fast Arithmetic ([slides](lec/lec13.pdf))                          | PH 2.10, 3.3, 3.4
+Fr Sep 27 | Fast Arithmetic ([slides](lec/lec13.pdf), [markup](lec/lec13-ink.pdf))                          | PH 2.10, 3.3, 3.4
 Mo Sep 30  | Pseudo Instructions and Functions ([slides](lec/lec14.pdf))        | PH 2.8
           | **Midterm**
 We Oct 2 | Midterm Review                            | [Midterm 2016](res/midterm2016.pdf)
