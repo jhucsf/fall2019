@@ -31,6 +31,20 @@ $c3 | 11000011 | $c3 | 11000011
 $fb | 11111011 | $df | 11011111
 $be | 10111110 | $7d | 01111101
 
-**Hints**: You may want to use memory locations for temp variables.
+**Hints**: You may want to use memory locations for temp variables.  You may use the X and Y registers freely.
 
 Test your function using [Easy 6502](http://skilldrick.github.io/easy6502/).  You can use calling code as shown above.  Be sure to add a `BRK` instruction after the calling code (i.e., after the `JSR` instruction) to avoid re-entering your `reverse_bits` function.
+
+## Problem 2
+
+Write a 6502 subroutine called `times3`.  It should modify the value of the A register so that it is three times its original value.
+
+Example calling code:
+
+<pre>
+LDA #<i>value</i>
+JSR times3
+; value of A is now 3&times;<i>value</i>
+</pre>
+
+For example, if you set A to `$11` (decimal 17), after calling `times3` A should be `$33` (decimal 51).
