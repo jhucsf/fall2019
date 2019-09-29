@@ -19,13 +19,18 @@ JSR reverse&#95;bits
 ; bits in A are now reversed
 </pre>
 
-Here are some example values to try
+Here are some example values to try (to substitute for *value* in the calling code above):
 
 Value | Binary | Value<br>(reversed) | Binary<br>(reversed)
 ----- | ------ | ---------------- | -----------------
-5a | 01011010 | 5a | 01011010
-68 | 01101000 | 16 | 00010110
-98 | 10011000 | 19 | 00011001
-21 | 00100001 | 84 | 10000100
-c3 | 11000011 | c3 | 11000011
+$5a | 01011010 | $5a | 01011010
+$68 | 01101000 | $16 | 00010110
+$98 | 10011000 | $19 | 00011001
+$21 | 00100001 | $84 | 10000100
+$c3 | 11000011 | $c3 | 11000011
+$fb | 11111011 | $df | 11011111
+$be | 10111110 | $7d | 01111101
 
+**Hints**: You may want to use memory locations for temp variables.
+
+Test your function using [Easy 6502](http://skilldrick.github.io/easy6502/).  You can use calling code as shown above.  Be sure to add a `BRK` instruction after the calling code (i.e., after the `JSR` instruction) to avoid re-entering your `reverse_bits` function.
