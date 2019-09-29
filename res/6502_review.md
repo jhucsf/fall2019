@@ -1,0 +1,31 @@
+---
+layout: assignment
+title: "6502 review problems"
+---
+
+This page has 6502 review problems to use studying for the midterm exam.
+
+## Problem 1
+
+Note: this is a somewhat challenging problem.
+
+Write a 6502 subroutine called `reverse_bits` which reverses the bits in the A register, returning its result in the A register.  Reversing bits means that the value of bit 0 becomes bit 7, bit 1 becomes bit 6, bit 2 becomes bit 5, etc.  (Think of the bits of A as an array of one-bit values, and reverse the contents of the array.)
+
+It should be called using code like
+
+<pre>
+LDA #<i>value</i>
+JSR reverse&#95;bits
+; bits in A are now reversed
+</pre>
+
+Here are some example values to try
+
+Value | Binary | Value<br>(reversed) | Binary<br>(reversed)
+----- | ------ | ---------------- | -----------------
+5a | 01011010 | 5a | 01011010
+68 | 01101000 | 16 | 00010110
+98 | 10011000 | 19 | 00011001
+21 | 00100001 | 84 | 10000100
+c3 | 11000011 | c3 | 11000011
+
