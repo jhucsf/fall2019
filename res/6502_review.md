@@ -5,6 +5,8 @@ title: "6502 review problems"
 
 This page has 6502 review problems to use studying for the midterm exam.
 
+You can refer to the [6502 Instruction Set](https://www.masswerk.at/6502/6502_instruction_set.html) reference for details on the various 6502 instructions.  The lecture slides are also a useful reference.
+
 ## Problem 1
 
 Note: this is a somewhat challenging problem.
