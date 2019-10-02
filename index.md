@@ -26,7 +26,11 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 
 [Homework 2: Digital Logic](hw/hw2.html), due Friday, Sep 20th by 10pm
 
+> Solution: [HW2\_soln.zip](hw/HW2_soln.zip)
+
 [Homework 3: Machine-level Programming](hw/hw3.html), due Friday, Sep 27th by 10pm
+
+> Solution: [HW3\_soln\_partial.zip](hw/HW3_soln_partial.zip)
 
 ## Resources
 
