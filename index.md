@@ -82,7 +82,7 @@ We Oct 2 | Midterm Review                            | [Midterm 2016](res/midter
 Fr Oct 4 | Midterm
           | **MIPS** (continued)
 Mo Oct 7  | Pipelining ([slides](lec/lec15.pdf), [markup](lec/lec15-ink.pdf))                                | PH 4.5-4.6
-We Oct 9  | Data Hazards  ([slides](lec/lec16.pdf))                             | PH 4.7
+We Oct 9  | Data Hazards  ([slides](lec/lec16.pdf), [markup](lec/lec16-ink.pdf))                             | PH 4.7
 Fr Oct 11 | Branch Prediction  ([slides](lec/lec17.pdf))                        | PH 4.8-4.9
 Mo Oct 14 | Cache Basics  ([slides](lec/lec18.pdf))                             | PH 5.1-5.3
 We Oct 16 | Cache Control ([slides](lec/lec19.pdf))                            | PH 5.4, 5.8-5.9
