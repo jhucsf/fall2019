@@ -8,11 +8,11 @@ title: "Homework 4: MIPS, cache simulator"
 -   **Collaboration:** None
 -   **Grading:** Packaging 10%, Style 10%, Design 10%, Functionality 70%
 
-*Preliminary assignment description, not official in any way!*
+*Note: this assignment description is substantially complete, but will likely be updated with additional details in the near future*
 
 ## Overview
 
-In this assignment you will write and analyze MIPS assembly code, and implement a cache simulator to evaluate the effects of different cacheing strategies on the number of cycles required to execute a sequence of memory references.
+In this assignment you will write and analyze MIPS assembly code, and implement a cache simulator to evaluate the effects of different caching strategies on the number of cycles required to execute a sequence of memory references.
 
 This is a pretty significant assignment, and we are giving you 2 full weeks to work on it.  This is because we *expect* it to require 2 weeks, so plan accordingly!
 
@@ -22,7 +22,82 @@ You might be able to find answers to these problems on the web.  Please resist t
 
 ## Problem 1: MIPS assembly (14%)
 
-TODO
+Write a MIPS assembly language program that implements a function called `vec_sum_sq`.  If it were a C function, it would have the following declaration:
+
+```c
+void vec_sum_sq(int result[], int vec1[], int vec2[], int count);
+```
+
+The parameters `result`, `vec1`, and `vec2` are all arrays of 32 bit int values.  The length of each array is specified by the `count` parameter.
+
+The computation done by the function is that for each index *i* in the range 0 to `count-1`:
+
+> `result[`*i*`] ← vec1[`*i*`]×vec1[`*i*`] + vec2[`*i*`]×vec2[`*i*`]`
+
+In other words, each element of the `result` array should be assigned the sum of the squares of the corresponding elements of `vec1` and `vec2`.
+
+Use the following template for your program (copy these contents into a file called `Problem1.s`):
+
+```
+	.text
+
+	.globl main
+	.globl vec_sum_sq
+
+main:
+	la $a0, result
+	la $a1, vec1
+	la $a2, vec2
+	la $t0, n_elts
+	lw $a3, 0($t0)
+
+	# save return address
+	addi $sp, $sp, -4
+	sw $ra, 0($sp)
+
+	# call vec_sum_sq
+	jal vec_sum_sq
+
+	# restore return address
+	lw $ra, 0($sp)
+	addi $sp, $sp, 4
+
+	# return from main
+	jr $ra
+
+# $a0 is base address of result vector.
+# $a1 is base address of first argument vector.
+# $a2 is base address of second argument vector.
+# $a3 is the number of elements in the argument vectors.
+vec_sum_sq:
+	# TODO - add your code here!
+
+########################################################################
+# Data segment: you are free to change the value of the
+# n_elt variables and the contents of the vec1 and vec2 arrays
+# for testing purposes.
+
+	.data
+result:	.space 10000
+n_elts:	.word 5
+vec1:	.word 1, 2, 3, 4, 5
+vec2:	.word 6, 7, 8, 9, 10
+```
+
+Test code is provided to allow you to test your function.
+When you execute the `main` function provided in the template,
+which uses the provided `n_elts`, `vec1`, and `vec2` variables,
+the first 5 elements of the `result` array should contain the
+values 37, 53, 73, 97, and 125.
+
+### Optimization!
+
+Once you get your `vec_sum_sq` function working, try to optimize it
+to avoid pipeline stalls.  Include a comments in your code indicating
+
+* the rationale for your optimization decisions, such as the
+  order of instructions, and
+* how successful you think you were, and why
 
 ## Problem 2: Cache simulator (56%)
 
@@ -295,7 +370,9 @@ Archive:  hw4.zip
 ```
 
 Your exact output will almost certainly differ, for example, depending on
-how you structured your program for Part 2.
+how you structured your program for Problem 2.
+
+Upload your zipfile to Gradescope as **HW4**.
 
 Grading
 -------
