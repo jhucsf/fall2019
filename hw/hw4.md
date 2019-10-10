@@ -90,6 +90,8 @@ which uses the provided `n_elts`, `vec1`, and `vec2` variables,
 the first 5 elements of the `result` array should contain the
 values 37, 53, 73, 97, and 125.
 
+Use the `spim` simulator to execute and debug your code.
+
 ### Optimization!
 
 Once you get your `vec_sum_sq` function working, try to optimize it
