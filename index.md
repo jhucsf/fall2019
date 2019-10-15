@@ -86,7 +86,7 @@ Fr Oct 4 | Midterm
 Mo Oct 7  | Pipelining ([slides](lec/lec15.pdf), [markup](lec/lec15-ink.pdf))                                | PH 4.5-4.6
 We Oct 9  | Data Hazards  ([slides](lec/lec16.pdf), [markup](lec/lec16-ink.pdf))                             | PH 4.7
 Fr Oct 11 | Branch Prediction  ([slides](lec/lec17.pdf), [markup](lec/lec17-ink.pdf))                        | PH 4.8-4.9
-Mo Oct 14 | Cache Basics  ([slides](lec/lec18.pdf))                             | PH 5.1-5.3
+Mo Oct 14 | Cache Basics  ([slides](lec/lec18.pdf), [markup](lec/lec18-ink.pdf))                             | PH 5.1-5.3
 We Oct 16 | Cache Control ([slides](lec/lec19.pdf))                            | PH 5.4, 5.8-5.9
 Fr Oct 18 | *Fall break, no class*
 Mo Oct 21 | Cache Policies ([slides](lec/lec20.pdf))                           | PH 5.7
