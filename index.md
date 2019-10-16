@@ -100,13 +100,13 @@ Mo Nov 4  | Process Control ([slides](lec/lec26.pdf))                          |
 We Nov 6  | Virtual Memory ([slides](lec/lec27.pdf))                           | BO 9.1-9.5
 Fr Nov 8  | Virtual Memory II ([slides](lec/lec28.pdf))                        | BO 9.6-9.9
           | **Networks**
-Mo Nov 4  | Unix I/O                                  | BO 10
-We Nov 6  | IP Protocol                               | BO 11.1-11.3
-Fr Nov 8  | Unix Sockets                              | BO 11.4
-Mo Nov 11 | Application protocols, HTTP               | BO 11.5-11.6
+Mo Nov 11  | Unix I/O                                  | BO 10
+We Nov 13  | IP Protocol                               | BO 11.1-11.3
+Fr Nov 15  | Unix Sockets                              | BO 11.4
+Mo Nov 18 | Application protocols, HTTP               | BO 11.5-11.6
           | **Threads and concurrency**
-We Nov 13 | Concurrency with processes, I/O multiplexing | BO 12.1-12.2
-Fr Nov 15 | Concurrency with threads                  | BO 12.3
+We Nov 20 | Concurrency with processes, I/O multiplexing | BO 12.1-12.2
+Fr Nov 22 | Concurrency with threads                  | BO 12.3
 Mo Nov 25 | *Thanksgiving vacation, no class*
 We Nov 27 | *Thanksgiving vacation, no class*
 Fr Nov 29 | *Thanksgiving vacation, no class*
