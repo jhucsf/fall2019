@@ -32,7 +32,7 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 
 > Solution: [HW3\_soln\_partial.zip](hw/HW3_soln_partial.zip)
 
-[Homework 4: MIPS, cache simulator](hw/hw4.html), due Friday, Oct 25th by 10pm
+[Homework 4: MIPS, cache simulator](hw/hw4.html), due <strike>Friday, Oct 25th by 10pm</strike> Monday, Oct 28th by 10pm
 
 ## Resources
 

@@ -4,7 +4,7 @@ title: "Homework 4: MIPS, cache simulator"
 ---
 
 -   **Out on:** Friday, Oct 11, 2019
--   **Due by:** Friday, Oct 25, 2019 before 10:00 pm
+-   **Due by:** <strike>Friday, Oct 25, 2019</strike> Monday, Oct 28, 2019 before 10:00 pm
 -   **Collaboration:** None
 -   **Grading:** Packaging 10%, Style 10%, Design 10%, Functionality 70%
 
