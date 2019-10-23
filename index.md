@@ -97,12 +97,12 @@ Mo Oct 28 | Compiling C code ([slides](lec/lec23.pdf))                         |
 We Oct 30 | Functions and Stack ([slides](lec/lec24.pdf))                      | BO 3.7
 Fr Nov 1  | Linking ([slides](lec/lec25.pdf))                                  | BO 7
 Mo Nov 4  | Process Control ([slides](lec/lec26.pdf))                          | BO 8
-We Nov 6  | Virtual Memory ([slides](lec/lec27.pdf))                           | BO 9.1-9.5
-Fr Nov 8  | Virtual Memory II ([slides](lec/lec28.pdf))                        | BO 9.6-9.9
+We Nov 6  | *Work day*
+Fr Nov 8  | Virtual Memory ([slides](lec/lec27.pdf))                           | BO 9.1-9.5
+Mo Nov 11  | Virtual Memory II ([slides](lec/lec28.pdf))                        | BO 9.6-9.9
           | **Networks**
-Mo Nov 11  | Unix I/O                                  | BO 10
-We Nov 13  | IP Protocol                               | BO 11.1-11.3
-Fr Nov 15  | Unix Sockets                              | BO 11.4
+We Nov 13  | Unix I/O | BO 10
+Fr Nov 15  | IP Protocol, Unix Sockets                 | BO 11.1-11.4
 Mo Nov 18 | Application protocols, HTTP               | BO 11.5-11.6
           | **Threads and concurrency**
 We Nov 20 | Concurrency with processes, I/O multiplexing | BO 12.1-12.2
