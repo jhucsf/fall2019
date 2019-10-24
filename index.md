@@ -90,7 +90,7 @@ Mo Oct 14 | Cache Basics  ([slides](lec/lec18.pdf), [markup](lec/lec18-ink.pdf))
 We Oct 16 | Cache Control ([slides](lec/lec19.pdf))                            | PH 5.4, 5.8-5.9
 Fr Oct 18 | *Fall break, no class*
 Mo Oct 21 | Cache Policies ([slides](lec/lec20.pdf), [markup](lec/lec20-ink.pdf))                           | PH 5.7
-We Oct 23 | Floating Point Numbers  ([slides](lec/lec21.pdf))                   | 	PH 3.5
+We Oct 23 | Floating Point Numbers  ([slides](lec/lec21.pdf), [markup](lec/lec21-ink.pdf))                   | 	PH 3.5
           | **x86**
 Fr Oct 25 | x86 Introduction ([slides](lec/lec22.pdf))                         | BO 3.1, online links: [1](http://www.cs.virginia.edu/~evans/cs216/guides/x86.html) [2](https://www.nayuki.io/page/a-fundamental-introduction-to-x86-assembly-programming) [3](http://download-mirror.savannah.gnu.org/releases//pgubook/ProgrammingGroundUp-1-0-booksize.pdf) [4](http://www.plantation-productions.com/Webster/www.artofasm.com/Windows/index.html) [5](http://patater.com/gbaguy/x86asm.htm) [Intel Manual](http://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf)
 Mo Oct 28 | Compiling C code ([slides](lec/lec23.pdf))                         | BO 3.2-3.6
