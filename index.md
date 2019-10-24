@@ -101,7 +101,7 @@ We Nov 6  | *Work day*
 Fr Nov 8  | Virtual Memory ([slides](lec/lec27.pdf))                           | BO 9.1-9.5
 Mo Nov 11  | Virtual Memory II ([slides](lec/lec28.pdf))                        | BO 9.6-9.9
           | **Networks**
-We Nov 13  | Unix I/O | BO 10
+We Nov 13  | Unix I/O ([slides](lec/lec29.pdf)) | BO 10
 Fr Nov 15  | IP Protocol, Unix Sockets                 | BO 11.1-11.4
 Mo Nov 18 | Application protocols, HTTP               | BO 11.5-11.6
           | **Threads and concurrency**
