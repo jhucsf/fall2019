@@ -34,6 +34,8 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 
 [Homework 4: MIPS, cache simulator](hw/hw4.html), due <strike>Friday, Oct 25th by 10pm</strike> Monday, Oct 28th by 10pm
 
+[Homework 5: x86-64 hexdump](hw/hw5.html), due Friday, Nov 8th by 10pm
+
 ## Resources
 
 **Logisim evolution (digital logic simulator)**:

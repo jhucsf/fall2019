@@ -4,7 +4,7 @@ title: "HW5: x86-64 hexdump"
 ---
 
   - **Out on:** Monday, Oct 28th, 2019
-  - **Due by:** TBD
+  - **Due by:** Friday, Nov 8th, 2019 by 10pm
   - **Collaboration:** None
   - **Grading:** Packaging 10%, Style 10%, Design 10% Functionality 70%
 
@@ -17,8 +17,12 @@ Acknowledgment: this assignment is based on the [Fall 2018 HW5](https://www.cs.j
 This assignment is **all** about hacking **native**
 [x86\_64](https://en.wikipedia.org/wiki/X86-64) assembly code. For
 obvious reasons, **you’ll need a *64-bit* Lubuntu 18.04 LTS reference
-system;** you cannot do this assignment on a 32-bit install. You’ll use
-the standard
+system;** you cannot do this assignment on a 32-bit install.
+(Note that the ugrad machines should work, but testing on an
+Ubuntu 18.04-derived system or virtual machine is recommended
+since it matches what the autograder will be using.)
+
+You’ll use the standard
 [gcc](http://en.wikipedia.org/wiki/GNU_Compiler_Collection)/[gas](http://en.wikipedia.org/wiki/GNU_Assembler)
 toolchain and you **must** use AT\&T syntax, **not** Intel syntax.
 
@@ -199,6 +203,8 @@ including (but not limited to):
 
 ## x86-64 tips and tricks
 
+Here are some tips and tricks in no particular order.
+
 Don't forget that you need to prefix constant values with `$`.  For example,
 if you want to set register `%r10` to 16, the instruction is
 
@@ -210,6 +216,24 @@ and not
 
 ```
 movq 16, %r10
+```
+
+If you want to use a label as a pointer (address), prefix it with
+`$`.  For example,
+
+```
+movq $sHexDigits, %r10
+```
+
+would put the address that `sHexDigits` refers to in `%r10`.
+
+If you want to load or store the *data* in a variable named by a
+label, then do *not* prefix it with `$`.  For example, if you want
+to load the value of the (64 bit) variable `bCount` into `%rdi`,
+use the instruction
+
+```
+movq bCount, %rdi
 ```
 
 When calling a function, the stack pointer (`%rsp`) must contain an address
@@ -248,7 +272,9 @@ yourself about calling conventions:
 
 In Unix and Linux, standard input is file descriptor 0.
 
-*More tips coming soon?*
+Linux system calls do *not* preserve `%rcx` or `%r11`, so make sure you save them on the stack if their contents need to be preserved across a system call.
+
+*More tips coming soon, maybe?*
 
 ## Deliverables
 
