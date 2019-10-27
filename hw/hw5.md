@@ -31,13 +31,11 @@ this regard.)
 
 ### Lost?
 
-If you find yourself wondering how to use a C function or a system call,
-you can use the `man` command to look up information about either. For
-example, to find out how the `putchar` function from the [C standard
-library](http://en.wikipedia.org/wiki/C_standard_library) works, use
-`man 3 putchar`; to find out how the `read` system call works, use
-`man 2 read` and so on. Sadly the `man` pages don’t describe the details
-required for system calls, but [this
+If you find yourself wondering how to use a system call,
+you can use the `man` command to look up information. For
+example, to find out how the `read` system call works, use
+`man 2 read`. Sadly the `man` pages don’t describe the details
+equire to call system calls from assembly language, but [this
 post](http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
 has everything you’ll need regarding register conventions and system
 call numbers.
@@ -58,8 +56,8 @@ You’re about to write that program **again**, but this time you’ll do it
 in **x86\_64 assembly** using **only system calls** and **no standard
 library**\!
 
-The specification for `hex` is **exactly** the same as given on the
-warmup assignment which means you can also reuse all your old test cases
+The specification for `hex` is **exactly** the same as given on
+[Homework 1](hw1.html) which means you can also reuse all your old test cases
 (assuming you had some). Of course you’ll now have to approach the
 problem a little differently, for example you’ll need to use the `read`
 and `write` system calls (with suitable buffers\!) instead of `getchar`
@@ -99,14 +97,14 @@ make hexTest
 ./hexTest
 ```
 
-**Extremely important guidance**: Writing complete programs in
+**Important advice**: Writing complete programs in
 assembly language is hard.  Using unit tests, you can adopt a
 test-driven approach where you implement one assembly language
 function at a time, and test them to ensure correct operation.
 *Using this approach will make developing the `hex` program vastly
 easier.*
 
-Here is a concrete example.  One useful function for the hexdump
+Here is a concrete example.  A useful function for the hexdump
 program is one that converts a byte value to a two-digit hex number.
 In assembly language, we could define this function like this:
 
@@ -170,6 +168,53 @@ All tests passed!
 
 If you'd like to see the entire `hexTest.c` with the test for `byteToHex`,
 here it is: [hexTest.c](hw5/hexTest.c)
+
+## Program-level testing
+
+In addition to unit testing individual functions, you should test
+the program as a whole the same way you tested the program you
+wrote for [Homework 1](hw1.html).  In general, for any input file
+(text, binary, etc.), the command
+
+<pre>
+./hex &lt; <i>inputfile</i>
+</pre>
+
+should produce exactly the same output as
+
+<pre>
+xxd -g 1 &lt; <i>inputfile</i>
+</pre>
+
+We encourage you to test your program with a variety of inputs,
+including (but not limited to):
+
+* empty file
+* small files
+* large files
+* files with sizes that are a multiple of 16
+* files with sizes that aren't a multiple of 16
+* text files
+* binary files
+
+## x86-64 tips and tricks
+
+When calling a function, the stack pointer (`%rsp`) must contain an address
+which is a multiple of 16.  However, because the `callq` instruction
+pushes an 8 byte return address on the stack, on entry to a function,
+the stack pointer will be "off" by 8 bytes.  You can subtract 8 from
+`%rsp` when a function begins and add 8 bytes to `%rsp` before returning
+to compensate.  (See the example `addLongs` function.)
+
+If you want to define read-only string constants, the `.rodata` section
+is the right place for them.  For example:
+
+```
+        .section .rodata
+sHexDigits: .string "0123456789abcdef"
+```
+
+*More tips coming soon?*
 
 ## Deliverables
 
