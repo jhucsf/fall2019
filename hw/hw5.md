@@ -106,6 +106,71 @@ function at a time, and test them to ensure correct operation.
 *Using this approach will make developing the `hex` program vastly
 easier.*
 
+Here is a concrete example.  One useful function for the hexdump
+program is one that converts a byte value to a two-digit hex number.
+In assembly language, we could define this function like this:
+
+```
+/*
+ * Convert a byte value to a two-digit hex string.
+ *
+ * Parameters:
+ *   val - a byte value
+ *   s - a pointer to a char buffer with enough room for a
+ *       string of length 2
+ */
+	.globl byteToHex
+byteToHex:
+	/* code would go here... */
+```
+
+To unit test this function, we make several changes to `hexTest.c`.
+First, we add a function prototype (right below the one for the
+example `addLongs` function):
+
+```c
+void byteToHex(long val, char *s);
+```
+
+We also add a function prototype for a new test function called
+`testByteToHex`, just below the prototype for `testAddLongs`:
+
+```c
+void testByteToHex(TestObjs *objs);
+```
+
+We add `testByteToHex` to the test functions to be executed from `main`:
+
+```c
+TEST(testByteToHex);
+```
+
+Finally, we add a definition of `testByteToHex`:
+
+```c
+void testByteToHex(TestObjs *objs) {
+        char buf[10];
+
+        byteToHex(0x29, buf);
+        ASSERT(0 == strcmp(buf, "29"));
+
+        byteToHex(0xC, buf);
+        ASSERT(0 == strcmp(buf, "0c"));
+}
+```
+
+Assuming that the `byteToHex` function was implemented correctly, when
+we compile and run `hexTest`, we should see the following output:
+
+```
+testAddLongs...passed!
+testByteToHex...passed!
+All tests passed!
+```
+
+If you'd like to see the entire `hexTest.c` with the test for `byteToHex`,
+here it is: [hexTest.c](hw5/hexTest.c)
+
 ## Deliverables
 
 Submit a zipfile containing your complete project.  The recommended
