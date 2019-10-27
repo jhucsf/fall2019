@@ -214,6 +214,24 @@ is the right place for them.  For example:
 sHexDigits: .string "0123456789abcdef"
 ```
 
+The `.equ` assembler directive is useful for defining constant values,
+for example:
+
+```
+.equ BUFSIZE, 16
+```
+
+You might find the following source code comment useful for reminding
+yourself about calling conventions:
+
+```
+/*
+ * Notes:
+ * Callee-saved registers: rbx, rbp, r12-r15
+ * Subroutine arguments:  rdi, rsi, rdx, rcx, r8, r9
+ */
+```
+
 *More tips coming soon?*
 
 ## Deliverables
