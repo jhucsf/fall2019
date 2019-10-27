@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://www.cs.jhu.edu/~phf/2018/fall/cs229/simple-x86_64.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>JHU / CS / Dr. Peter H. Fröhlich / 2018 / Fall / 601.229 / Assignment 5</title>
+<meta name="description" content="Dr. Fröhlich&#39;s official
+  Department of Computer Science home page at Johns Hopkins
+  University. Courses taught, projects available, positions
+  held, and much more. Including office hours and external
+  links of interest. You really should read it all.">
+<meta name="author" content="Peter H. Fröhlich">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./hw5-phf_files/normalize.css" rel="stylesheet" type="text/css">
+<link href="./hw5-phf_files/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Assignment 5: The x86_64 Adventure</h1>
+
+<ul>
+<li><strong>Out on:</strong> November 26, 2018</li>
+<li><strong>Due by:</strong> December 7, 2018 before 10:00 pm</li>
+<li><strong>Collaboration:</strong> None</li>
+<li><strong>Grading:</strong> Packaging 10%, Style 10%, Design 10%, Performance 10%,
+Functionality 60%</li>
+</ul>
+
+<h2>Overview</h2>
+
+<p>This assignment is <strong>all</strong> about hacking <strong>native</strong>
+<a href="https://en.wikipedia.org/wiki/X86-64">x86_64</a> assembly code.
+For obvious reasons, <strong>you’ll need a <em>64-bit</em> Lubuntu 18.04 LTS reference
+system;</strong> you cannot do this assignment on a 32-bit install.
+You’ll use the standard
+<a href="http://en.wikipedia.org/wiki/GNU_Compiler_Collection">gcc</a>/<a href="http://en.wikipedia.org/wiki/GNU_Assembler">gas</a>
+toolchain and you <strong>must</strong> use AT&amp;T syntax, <strong>not</strong> Intel syntax.</p>
+
+<p>For some problems we give you a bunch of starter code on Piazza already, for
+others you’re on your own.
+It’s <strong>highly</strong> recommended that you actually <strong>read</strong> the starter code,
+especially any explanatory comments it might contain, before changing it.</p>
+
+<p><strong>Note that for <em>all</em> problems the <em>full</em> x86_64 conventions regarding register
+usage (arguments, results, caller-saved vs. callee-saved, etc.) are in effect!
+(Of course regular calls differ from system calls in this regard.)</strong></p>
+
+<h3>Lost?</h3>
+
+<p>If you find yourself wondering how to use a C function or a system call, you
+can use the <code>man</code> command to look up information about either.
+For example, to find out how the <code>putchar</code> function from the
+<a href="http://en.wikipedia.org/wiki/C_standard_library">C standard library</a> works,
+use <code>man 3 putchar</code>; to find out how the <code>read</code> system call works, use
+<code>man 2 read</code> and so on. Sadly the <code>man</code> pages don’t describe the details
+required for system calls, but
+<a href="http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/">this post</a>
+has everything you’ll need regarding register conventions and system call
+numbers.</p>
+
+<h3>Warning!</h3>
+
+<p>Undocumented assembly code <strong>will</strong> lose points. You don’t have to comment
+<strong>every</strong> line, but at least every “coherent chunk” of assembly should have
+a comment or two. In particular you <strong>must</strong> describe where you get what data
+from, especially when it comes to functions and their parameters/results.
+<strong>You have been warned!</strong></p>
+
+<h2>Problem 1: Quicksort (30%)</h2>
+
+<p>Remember sorting things in MIPS assembly? Now you’ll get to do it in x86_64
+assembly instead! But let’s make things a little more interesting and do a
+<strong>recursive quicksort</strong> instead of some sad quadratic sorting algorithm…</p>
+
+<p>The “good news” is that you won’t have to write the <em>partitioning step</em> which
+is (in a way) the hardest part of quicksort. Your focus will instead be on the
+recursion that “subdivides” the array and applies the partitioning step
+repeatedly to eventually produce a sorted array. The recursion is really quite
+simple, at least in pseudo-code
+(taken from <a href="http://en.wikipedia.org/wiki/Quicksort">Wikipedia</a>):</p>
+
+<pre><code>algorithm quicksort(A, lo, hi) is
+	if lo &lt; hi then
+		p := partition(A, lo, hi)
+		quicksort(A, lo, p – 1)
+		quicksort(A, p + 1, hi)
+</code></pre>
+
+<p>The starter code on <a href="http://piazza.com/jhu/fall2018/600229">Piazza</a> has three files related to this
+problem.
+The file <code>quick.S</code> is for you to fill in your assembly code.
+The file <code>sort.c</code> contains a simplistic test driver as well as the
+<strong>partitioning</strong> function you’ll call from your assembly code.
+Finally, there’s a <code>Makefile</code> that you can use to build the <code>sort</code> program.
+Neat, eh?</p>
+
+<p><strong>Important:</strong> You must actually write <strong>functions</strong> for this problem, not just
+random code connected with some labels. Functions deal with parameters, local
+variables, and results; they do so in a standardized way that we
+discovered/discussed in lecture. Your functions must work exactly that way!
+Aside from how functions connect to each other, however, the code is entirely
+up to you. I am not suggesting any particular way of organizing it.
+<strong>Except that it has to be properly recursive!</strong></p>
+
+<p><strong>Hint:</strong> Pay careful attention to your register usage! You may need local
+variables inside your functions and you should carefully consider where to
+place them. Using the <strong>redzone</strong> is <strong>not</strong> a good idea because the function
+you need to write is <strong>not</strong> a leaf function!
+And don’t forget to preserve registers correctly!</p>
+
+<h2>Problem 2: Hexdump’s Revenge (70%)</h2>
+
+<p>Remember the <code>hex</code> program from <a href="https://www.cs.jhu.edu/~phf/2018/fall/cs229/simple-warmup.html">Assignment 0</a>?
+You’re about to write that program <strong>again</strong>, but this time you’ll do it in
+<strong>x86_64 assembly</strong> using <strong>only system calls</strong> and <strong>no standard library</strong>!</p>
+
+<p>The specification for <code>hex</code> is <strong>exactly</strong> the same as given on the warmup
+assignment which means you can also reuse all your old test cases (assuming
+you had some). Of course you’ll now have to approach the problem a little
+differently, for example you’ll need to use the <code>read</code> and <code>write</code> system calls
+(with suitable buffers!) instead of <code>getchar</code> or <code>printf</code> or whatnot.</p>
+
+<p>The starter code on <a href="http://piazza.com/jhu/fall2018/600229">Piazza</a> has two files related to this
+problem.
+The file <code>hex.S</code> is for you to fill in your assembly code.
+There’s also a <code>Makefile</code> (actually the same as for Problem 1 above) that you
+can use to build the <code>hex</code> program.</p>
+
+<h3>Downsize!</h3>
+
+<p>We’ll reserve 7 points of this problem for a <strong>ranking</strong> in terms of <strong>code
+size</strong> as measured by the <code>size</code> tool. That is, we’ll rank your submissions
+according to <code>text</code> size, smaller is better, and award between 0 to 7 points
+based on where your submission ends up in the ranking. <strong>Make it small!</strong></p>
+
+<h3>Warning!</h3>
+
+<p><strong>If in doubt, go for <em>clarity</em>!</strong>
+Don’t shave off three bytes by writing terribly confusing code. The points
+you’d “gain” for a smaller program will probably be “lost” again because your
+program is now super-confusing. You’ll have to find a good tradeoff between
+making things small <em>and</em> making things clear.
+<strong>You have been warned!</strong></p>
+
+<h2>Deliverables</h2>
+
+<p>Please follow the submission instructions as detailed on
+<a href="http://piazza.com/jhu/fall2018/600229">Piazza</a>.
+Be sure to include a <code>Makefile</code> that sets the appropriate compiler flags and
+builds <strong>all programs</strong> by default.
+<strong>Finally, make sure to include your name and email address in <em>every</em> file
+you turn in (well, in every file for which it makes sense to do so anyway)!</strong></p>
+
+<h2>Grading</h2>
+
+<p>For reference, here is a short explanation of the grading criteria;
+some of the criteria don’t apply to all problems,
+and not all of the criteria are used on all assignments.</p>
+
+<p><strong>Packaging</strong> refers to the proper organization of the stuff you hand in,
+following both the guidelines for Deliverables above as well as the general
+submission instructions for assignments on <a href="http://piazza.com/jhu/fall2018/600229">Piazza</a>.</p>
+
+<p><strong>Style</strong> refers to C/C++/assembly programming style, including things like
+consistent indentation, appropriate identifier names, useful comments, suitable
+documentation, etc.
+Simple, clean, readable code is what you should be aiming for.
+Make sure you follow the style guide posted on <a href="http://piazza.com/jhu/fall2018/600229">Piazza</a>!</p>
+
+<p><strong>Design</strong> refers to proper modularization (functions, modules, classes, etc.)
+and an appropriate choice of algorithms and data structures.</p>
+
+<p><strong>Performance</strong> refers to how fast/with how little memory your programs can
+produce the required results compared to other submissions.</p>
+
+<p><strong>Functionality</strong> refers to your programs being able to do what they
+should according to the specification given above; if the specification
+is ambiguous, ask for clarification!
+(It also refers to you simply doing the required work, which may not be
+programming alone.)</p>
+
+<p><strong>If your programs cannot be built you will get no points whatsoever.
+If your programs cannot be built without warnings using the required compiler
+options given on <a href="http://piazza.com/jhu/fall2018/600229">Piazza</a> we will take off 10% (except if you
+document a <em>very</em> good reason).
+If your programs cannot be built using <code>make</code> we will take off 10%.
+If <code>valgrind</code> detects memory errors in your programs, we will take off 10%.
+If your programs fail miserably even once, i.e. terminate with an exception of
+any kind or dump core, we will take off 10% (for each such case).</strong></p>
+
+
+
+</body></html>
