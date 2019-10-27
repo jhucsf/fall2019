@@ -199,12 +199,26 @@ including (but not limited to):
 
 ## x86-64 tips and tricks
 
+Don't forget that you need to prefix constant values with `$`.  For example,
+if you want to set register `%r10` to 16, the instruction is
+
+```
+movq $16, %r10
+```
+
+and not
+
+```
+movq 16, %r10
+```
+
 When calling a function, the stack pointer (`%rsp`) must contain an address
 which is a multiple of 16.  However, because the `callq` instruction
 pushes an 8 byte return address on the stack, on entry to a function,
 the stack pointer will be "off" by 8 bytes.  You can subtract 8 from
 `%rsp` when a function begins and add 8 bytes to `%rsp` before returning
-to compensate.  (See the example `addLongs` function.)
+to compensate.  (See the example `addLongs` function.)  Pushing an
+odd number of caller-saved registers also works.
 
 If you want to define read-only string constants, the `.rodata` section
 is the right place for them.  For example:
@@ -231,6 +245,8 @@ yourself about calling conventions:
  * Subroutine arguments:  rdi, rsi, rdx, rcx, r8, r9
  */
 ```
+
+In Unix and Linux, standard input is file descriptor 0.
 
 *More tips coming soon?*
 
