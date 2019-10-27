@@ -8,8 +8,6 @@ title: "HW5: x86-64 hexdump"
   - **Collaboration:** None
   - **Grading:** Packaging 10%, Style 10%, Design 10% Functionality 70%
 
-*Preliminary assignment description, not official yet!*
-
 Acknowledgment: this assignment is based on the [Fall 2018 HW5](https://www.cs.jhu.edu/~phf/2018/fall/cs229/simple-x86_64.html) by Peter Froehlich.
 
 ## Overview
