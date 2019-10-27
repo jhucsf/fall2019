@@ -22,10 +22,7 @@ the standard
 [gcc](http://en.wikipedia.org/wiki/GNU_Compiler_Collection)/[gas](http://en.wikipedia.org/wiki/GNU_Assembler)
 toolchain and you **must** use AT\&T syntax, **not** Intel syntax.
 
-For some problems we give you a bunch of starter code on Piazza already,
-for others you’re on your own. It’s **highly** recommended that you
-actually **read** the starter code, especially any explanatory comments
-it might contain, before changing it.
+You should use the following starter code: [hw5.zip](hw5.zip)
 
 Note that for *all* problems the *full* x86\_64 conventions regarding
 register usage (arguments, results, caller-saved vs. callee-saved, etc.)
@@ -68,19 +65,65 @@ problem a little differently, for example you’ll need to use the `read`
 and `write` system calls (with suitable buffers\!) instead of `getchar`
 or `printf` or whatnot.
 
-The starter code on [Piazza](http://piazza.com/jhu/fall2018/600229) has
-two files related to this problem. The file `hex.S` is for you to fill
-in your assembly code. There’s also a `Makefile` (actually the same as
-for Problem 1 above) that you can use to build the `hex` program.
+The starter code has two files related to this problem. The files `hex.S`
+and `hexFuncs.S` are the assembly language modules used to implement
+the `hex` program.  The `hex.S` module should contain *only* the `main`
+function for the `hex` program.  The `hexFuncs.S` module should contain
+useful functions that you can call from `main`.
+
+## Unit testing
+
+Whenever you write functions to incorporate into a program,
+is extremely important to have confidence that they behave correctly.
+Unit tests are a very effective way to test the behavior of functions
+to make sure they meet their specfications.
+
+In this assignment, you will use a simple unit testing framework
+called [TCTest](https://github.com/daveho/tctest).  You can read
+the [README](https://github.com/daveho/tctest/blob/master/README.md)
+and [demo program](https://github.com/daveho/tctest/blob/master/demo.c)
+for specific information about how it works, but if you've used unit
+testing frameworks such as [JUnit](https://junit.org), it should be
+fairly straightforward.
+
+You should use unit tests to test the functions in `hexFuncs.S`.
+Add your unit tests to the `hexTest.c` source file.
+For each function that you want to test, you will need to write
+a C language function declaration for the function.  You can use
+the `addLongs` example function and its associated tests as an example.
+
+To compile and run the unit tests, run the following commands:
+
+```
+make hexTest
+./hexTest
+```
+
+**Extremely important guidance**: Writing complete programs in
+assembly language is hard.  Using unit tests, you can adopt a
+test-driven approach where you implement one assembly language
+function at a time, and test them to ensure correct operation.
+*Using this approach will make developing the `hex` program vastly
+easier.*
 
 ## Deliverables
 
-Please follow the submission instructions as detailed on
-[Piazza](http://piazza.com/jhu/fall2018/600229). Be sure to include a
-`Makefile` that sets the appropriate compiler flags and builds **all
-programs** by default. **Finally, make sure to include your name and
+Submit a zipfile containing your complete project.  The recommended
+way to do this is to run the command `make solution.zip`.  This
+will create a file called `solution.zip` with all of the required
+files.  **Important**: all of the files in the zipfile must be
+at the top level, not a subdirectory.  For example, if your
+zipfile is called `solution.zip` and you run the command `unzip -l solution.zip`
+to list its contents, you should see something like the following output:
+
+```
+TODO: expected output of unzip -l solution.zip
+```
+
+Upload your zipfile to Gradescope as **HW5**.
+Make sure to include your name and
 email address in *every* file you turn in (well, in every file for which
-it makes sense to do so anyway)\!**
+it makes sense to do so anyway!)
 
 ## Grading
 
@@ -91,13 +134,13 @@ are used on all assignments.
 **Packaging** refers to the proper organization of the stuff you hand
 in, following both the guidelines for Deliverables above as well as the
 general submission instructions for assignments on
-[Piazza](http://piazza.com/jhu/fall2018/600229).
+[Piazza](http://piazza.com/jhu/fall2019/601229).
 
 **Style** refers to C/C++/assembly programming style, including things
 like consistent indentation, appropriate identifier names, useful
 comments, suitable documentation, etc. Simple, clean, readable code is
 what you should be aiming for. Make sure you follow the style guide
-posted on [Piazza](http://piazza.com/jhu/fall2018/600229)\!
+posted on [Piazza](http://piazza.com/jhu/fall2019/601229)\!
 
 **Design** refers to proper modularization (functions, modules, classes,
 etc.) and an appropriate choice of algorithms and data structures.
@@ -113,7 +156,7 @@ doing the required work, which may not be programming alone.)
 **If your programs cannot be built you will get no points whatsoever. If
 your programs cannot be built without warnings using the required
 compiler options given on
-[Piazza](http://piazza.com/jhu/fall2018/600229) we will take off 10%
+[Piazza](http://piazza.com/jhu/fall2019/601229) we will take off 10%
 (except if you document a *very* good reason). If your programs cannot
 be built using `make` we will take off 10%. If `valgrind` detects memory
 errors in your programs, we will take off 10%. If your programs fail
