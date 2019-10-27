@@ -333,7 +333,9 @@ make the other design parameters work. Also, sanity-check your simulator
 frequently with simple, hand-crafted traces for which you can still
 derive manually what the behavior should be.
 
-*More hints coming soon...*
+*More hints coming soon...* (Sorry, no more hints will be forthcoming
+on this assignment description page, but please do check out
+[Piazza](http://piazza.com/jhu/fall2019/601229)).
 
 ### Problem 2(b): Best Cache? (6%)
 
