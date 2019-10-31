@@ -10,6 +10,8 @@ title: "HW5: x86-64 hexdump"
 
 Acknowledgment: this assignment is based on the [Fall 2018 HW5](https://www.cs.jhu.edu/~phf/2018/fall/cs229/simple-x86_64.html) by Peter Froehlich.
 
+*Update 10/31*: added [Example assembly language programs](#example-assembly-language-programs)
+
 ## Overview
 
 This assignment is **all** about hacking **native**
@@ -272,7 +274,25 @@ In Unix and Linux, standard input is file descriptor 0.
 
 Linux system calls do *not* preserve `%rcx` or `%r11`, so make sure you save them on the stack if their contents need to be preserved across a system call.
 
-*More tips coming soon, maybe?*
+The GNU assembler allows you to define "local" labels, which start with the prefix `.L`.  You should use these for control flow targets within a function.  For example (from the [echoInput.S](hw5/echoInput.S) example program):
+
+```
+	cmpq $0, %rax                 /* see if read failed */
+	jl .LreadError                /* handle read failure */
+
+	...
+
+.LreadError:
+	/* error handling goes here */
+
+```
+
+## Example assembly language programs
+
+For reference, here are links to a couple of example assembly language programs which use the `read` and `write` system calls.
+
+* [hello.S](hw5/hello.S): prints a `Hello, world` message
+* [echoInput.S](hw5/echoInput.S): reads up to 128 bytes of data from standard input and echoes it to standard output
 
 ## Deliverables
 
