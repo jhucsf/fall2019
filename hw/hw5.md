@@ -12,6 +12,8 @@ Acknowledgment: this assignment is based on the [Fall 2018 HW5](https://www.cs.j
 
 *Update 10/31*: added [Example assembly language programs](#example-assembly-language-programs)
 
+*Update 11/5*: added hint about how to determine which bytes are printable characters
+
 ## Overview
 
 This assignment is **all** about hacking **native**
@@ -286,6 +288,11 @@ The GNU assembler allows you to define "local" labels, which start with the pref
 	/* error handling goes here */
 
 ```
+
+**Hint about determining which characters are printable**: the range of
+printable ASCII characters is 32 through 126, inclusive.  Any byte value
+that is not in this range should be printed as "`.`" (period).  Note
+that "`.`" has ASCII value 46.
 
 ## Example assembly language programs
 
