@@ -14,6 +14,8 @@ Acknowledgment: this assignment is based on the [Fall 2018 HW5](https://www.cs.j
 
 *Update 11/5*: added hint about how to determine which bytes are printable characters
 
+*Update 11/5*: clarified that writing unit tests is strongly encouraged but not required
+
 <!-- why won't github pages update? -->
 
 ## Overview
@@ -93,6 +95,8 @@ testing frameworks such as [JUnit](https://junit.org), it should be
 fairly straightforward.
 
 You should use unit tests to test the functions in `hexFuncs.S`.
+[Note that you are not *required* to write unit tests, but
+we *strongly encourage* you to write unit tests.]
 Add your unit tests to the `hexTest.c` source file.
 For each function that you want to test, you will need to write
 a C language function declaration for the function.  You can use
