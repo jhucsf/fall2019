@@ -14,6 +14,8 @@ Acknowledgment: this assignment is based on the [Fall 2018 HW5](https://www.cs.j
 
 *Update 11/5*: added hint about how to determine which bytes are printable characters
 
+<!-- why won't github pages update? -->
+
 ## Overview
 
 This assignment is **all** about hacking **native**
