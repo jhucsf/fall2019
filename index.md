@@ -34,7 +34,7 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 
 [Homework 4: MIPS, cache simulator](hw/hw4.html), due <strike>Monday, Oct 28th by 10pm</strike> Tuesday, Oct 29th by 10pm
 
-[Homework 5: x86-64 hexdump](hw/hw5.html), due Friday, Nov 8th by 10pm
+[Homework 5: x86-64 hexdump](hw/hw5.html), due <strike>Friday, Nov 8th by 10pm</strike> Monday, Nov 11th by 10pm
 
 ## Resources
 

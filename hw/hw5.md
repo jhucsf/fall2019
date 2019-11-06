@@ -4,7 +4,7 @@ title: "HW5: x86-64 hexdump"
 ---
 
   - **Out on:** Monday, Oct 28th, 2019
-  - **Due by:** Friday, Nov 8th, 2019 by 10pm
+  - **Due by:** <strike>Friday, Nov 8th, 2019 by 10pm</strike> Monday, Nov 11th, 2019 by 10pm
   - **Collaboration:** None
   - **Grading:** Packaging 10%, Style 10%, Design 10% Functionality 70%
 
