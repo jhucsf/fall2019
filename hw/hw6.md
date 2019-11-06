@@ -173,9 +173,27 @@ std::vector<std::string> tokenize(const std::string &expr) {
 
 *Maybe more hints here eventually...*
 
-## Part 2: Calculator server
+## Part 2: Internet calculator
 
-Description coming soon...
+The second part of your task is to implement a calculator server that listens
+for client TCP connections, reads a sequence of expressions, and evaluates each
+expression.
+
+You should implement your calculator server in `calcServer.c`.  The program should
+take a single command line argument, which specifies a TCP port.  The server
+program should listen for incoming connections on the specified port, and then
+communicate with the client in the same way that the `calcInteractive` program
+does.  You can (and should!) adapt the `chat_with_client` function to use
+in your server implementation.
+
+Note that the server should use a *single* instance of `struct Calc` for all
+client connections.  This will be important for the next assignment!
+
+Note that there is no expectation that the server will support concurrent
+connections: it is only expected to handle one client at a time.
+This is a limitation you will address in the next assignment.
+
+*TODO: more description...*
 
 ## Submitting
 
