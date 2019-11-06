@@ -152,6 +152,27 @@ Error
 <b>quit</b>
 </pre>
 
+### Calculator implementation hints
+
+If you implement your calculator in C++ you could use the following function to break an input expression into tokens:
+
+```cpp
+std::vector<std::string> tokenize(const std::string &expr) {
+    std::vector<std::string> vec;
+    std::stringstream s(expr);
+
+    std::string tok;
+    while (s >> tok) {
+        vec.push_back(tok);
+    }
+
+    return vec;
+}
+
+```
+
+*Maybe more hints here eventually...*
+
 ## Part 2: Calculator server
 
 Description coming soon...
