@@ -16,6 +16,8 @@ Acknowledgment: this assignment is based on the [Fall 2018 HW5](https://www.cs.j
 
 *Update 11/5*: clarified that writing unit tests is strongly encouraged but not required
 
+*Update 11/7*: added [Example assembly language functions](#example-assembly-language-functions)
+
 <!-- why won't github pages update? -->
 
 ## Overview
@@ -306,6 +308,87 @@ For reference, here are links to a couple of example assembly language programs 
 
 * [hello.S](hw5/hello.S): prints a `Hello, world` message
 * [echoInput.S](hw5/echoInput.S): reads up to 128 bytes of data from standard input and echoes it to standard output
+
+## Example assembly language functions
+
+This section shows implementations of a couple of assembly language functions
+you might find useful.
+
+Here is an assembly language function called `strLen` which returns the number
+of characters in a NUL-terminated character string:
+
+```
+/*
+ * Determine the length of specified character string.
+ *
+ * Parameters:
+ *   s - pointer to a NUL-terminated character string
+ *
+ * Returns:
+ *    number of characters in the string
+ */
+	.globl strLen
+strLen:
+	subq $8, %rsp                 /* adjust stack pointer */
+	movq $0, %r10                 /* initial count is 0 */
+
+.LstrLenLoop:
+	cmpb $0, (%rdi)               /* found NUL terminator? */
+	jz .LstrLenDone               /* if so, done */
+	inc %r10                      /* increment count */
+	inc %rdi                      /* advance to next character */
+	jmp .LstrLenLoop              /* continue loop */
+
+.LstrLenDone:
+	movq %r10, %rax               /* return count */
+	addq $8, %rsp                 /* restore stack pointer */
+	ret
+```
+
+In C, the declaration of this function could look like this:
+
+```c
+long strLen(const char *s);
+```
+
+Unit testing this function might involve the following assertions:
+
+```c
+ASSERT(13L == strLen("Hello, world!"));
+ASSERT(0L == strLen(""));
+ASSERT(8L == strLen("00000010"));
+```
+
+Here is a function that writes a NUL-terminated character string
+to standard output:
+
+```
+/*
+ * Print a C character string to stdout.
+ *
+ * Parameters:
+ *   s - the string to print
+ */
+	.globl printStr
+printStr:
+	pushq %r12                    /* preserve contents of %r12 */
+
+	/* determine length of string */
+	movq %rdi, %r12               /* save s (strLen will modify %rdi) */
+	callq strLen                  /* determine length of s */
+
+	/* use write system call to print string */
+	movq $1, %rdi                 /* first write arg is fd (1=stdout) */
+	movq %r12, %rsi               /* second write arg is buffer */
+	movq %rax, %rdx               /* third write arg is count */
+	movq $1, %rax                 /* write is system call 1 */
+	syscall                       /* call write */
+
+	popq %r12                     /* restore contents of %r12 */
+	ret
+```
+
+Note that this function uses the `strLen` function.
 
 ## Deliverables
 
