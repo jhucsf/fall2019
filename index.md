@@ -36,6 +36,8 @@ Homework assignments are based on assignments designed by [Peter Froehlich](http
 
 [Homework 5: x86-64 hexdump](hw/hw5.html), due <strike>Friday, Nov 8th by 10pm</strike> Monday, Nov 11th by 10pm
 
+[Homework 6: Internet calculator](hw/hw6.html), due Friday, Nov 22nd by 10pm
+
 ## Resources
 
 **Logisim evolution (digital logic simulator)**:
