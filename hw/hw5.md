@@ -16,7 +16,8 @@ Acknowledgment: this assignment is based on the [Fall 2018 HW5](https://www.cs.j
 
 *Update 11/5*: clarified that writing unit tests is strongly encouraged but not required
 
-*Update 11/7*: added [Example assembly language functions](#example-assembly-language-functions)
+*Update 11/7*: added [Example assembly language functions](#example-assembly-language-functions),
+also slightly corrected the advice about stack pointer alignment
 
 <!-- why won't github pages update? -->
 
@@ -252,7 +253,8 @@ pushes an 8 byte return address on the stack, on entry to a function,
 the stack pointer will be "off" by 8 bytes.  You can subtract 8 from
 `%rsp` when a function begins and add 8 bytes to `%rsp` before returning
 to compensate.  (See the example `addLongs` function.)  Pushing an
-odd number of caller-saved registers also works.
+odd number of callee-saved registers also works, and has the benefit
+that you can then use the callee-saved registers freely in your function.
 
 If you want to define read-only string constants, the `.rodata` section
 is the right place for them.  For example:
