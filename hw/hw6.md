@@ -8,13 +8,29 @@ title: "HW6: Internet calculator"
   - **Collaboration:** None
   - **Grading:** Packaging 10%, Style 10%, Design 10% Functionality 70%
 
-*Preliminary assignment description, not official yet*
-
 ## Overview
 
 In this assignment, you will develop a calculator program that accepts connections from clients over the Internet.
 
 Get started by downloading [hw6.zip](hw6.zip).
+
+## Goals of the assignment
+
+The main goal of the assignment is to provide an opportunity to create a network-based application.
+
+Although this will be a relatively simple program, it is representative of a larger class of network-enabled systems:
+
+* It will have a protocol for communication between clients and server
+* It will allow communication over a network (specifically, by accepting TCP connections from clients)
+* It will enable access to data stored on the server (in the form of values of variables which persist between communication sessions)
+
+## Grading rubric
+
+The functionality component of the assignment (worth 70% of the total grade) will be determined as follows:
+
+* Calculator functionality: 35%
+* Basic network server functionality: 30%
+* Variables persist between sessions: 5%
 
 ## Part 1: Calculator implementation
 
@@ -76,7 +92,7 @@ class CalcImpl : public Calc {
 };
 ```
 
-**Important**: do **not** define the actual `struct Calc` data type in `calc.h`; it should be defined only in the implementation module (`calc.cpp` or `calc.c`).
+**Important**: do **not** define the actual `struct Calc` data type in `calc.h`; it should be defined only in the implementation module (`calc.cpp` or `calc.c`).  `struct Calc` is an *opaque data type*, meaning that no implementation details are exposed to code using the type.
 
 If you use C++, make sure that your `calc_` functions have `extern "C"` linkage, so that they can be called from C code.  For example, you might define them as follows:
 
@@ -95,6 +111,8 @@ extern "C" int calc_eval(struct Calc *calc, const char *expr, int *result) {
     return obj->evalExpr(expr, *result);
 }
 ```
+
+These example functions (which you are welcome to use) work by creating an instance of `CalcImpl` class and using an `evalExpr` member function to perform expression evaluation.
 
 ### Unit tests
 
@@ -173,7 +191,7 @@ std::vector<std::string> tokenize(const std::string &expr) {
 
 *Maybe more hints here eventually...*
 
-## Part 2: Internet calculator
+## Part 2: Calculator server
 
 The second part of your task is to implement a calculator server that listens
 for client TCP connections, reads a sequence of expressions, and evaluates each
@@ -184,18 +202,93 @@ take a single command line argument, which specifies a TCP port.  The server
 program should listen for incoming connections on the specified port, and then
 communicate with the client in the same way that the `calcInteractive` program
 does.  You can (and should!) adapt the `chat_with_client` function to use
-in your server implementation.
+in your server implementation.  Note that in addition to recognizing the special
+`quit` command (which should cause the server to end the session with the
+currently-connected client), the server `chat_with_client` function should
+also recognize a `shutdown` command, which causes the server process to exit.
 
 Note that the server should use a *single* instance of `struct Calc` for all
-client connections.  This will be important for the next assignment!
+client connections.  That means that if a variable is assigned a value by
+one session, the variable will have the same value in a subsequent session.
+This sharing of variables between sessions will be important for the next assignment!
 
 Note that there is no expectation that the server will support concurrent
 connections: it is only expected to handle one client at a time.
 This is a limitation you will address in the next assignment.
 
-*TODO: more description...*
+### Running and testing the server
 
-## Submitting
+Build the server program with the command
+
+`make calcServer`
+
+Here is an example of how the server program should be run:
+
+```
+./calcServer 47374
+```
+
+The command-line argument to `calcServer` is the TCP port on which the server
+should listen for connections from clients.  You will need to choose a
+TCP port number that is 1024 or greater (ports 0–2013 require superuser
+privileges.)
+
+To connect to the server, use the `telnet` program.  For example, to
+connect to a `calcServer` listening on port 47374, use the command
+
+```
+telnet localhost 47374
+```
+
+The `telnet` program will allow you to interact with the server program,
+more or less exactly the same way you interacted with the `calcInteractive`
+program in the terminal.  Here is a transcript showing interaction with
+the server program in two separate sessions (user input in **bold**):
+
+<pre>
+$ <b>telnet localhost 47374</b>
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+<b>2 + 3</b>
+5
+<b>a = 42</b>
+42
+<b>quit</b>
+Connection closed by foreign host.
+$ <b>telnet localhost 47374</b>
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+<b>a + 1</b>
+43
+<b>shutdown</b>
+Connection closed by foreign host.
+</pre>
+
+A couple things to note about this example:
+
+* The value of the variable `a` was assigned in the first session, and used in the second session
+* The `shutdown` command in the second session, in addition to closing the client session, also shut down the server process
+
+Also note that you will probably want to have two terminals running, one to run the server and one to run `telnet`.
+
+### Server implementation techniques
+
+Using the functions defined in `csapp.h` and `csapp.c` will make adding network support significantly easier.  These functions are described in the BO textbook, and are generally useful for Unix systems programming.
+
+The `Open_listenfd` function can be used to open a *server socket*, which is a special file descriptor that the server will use to listen for connections from clients.
+
+The `Accept` function (which is simply a wrapper for the `accept` system call) causes the server to wait for a client connection request.  It returns a *client socket* file descriptor, which the server can use to communicate with the client process.  You can pass the second and third arguments of `Accept` as `NULL`, since they are used only to allow the server to determine the client's network address.
+
+The client socket file descriptor is bidirectional, meaning it can be written to (to send data to the client) and also read from (to receive data from the client.)  The `chat_with_client` function from `calcInteractive.c` can be reused more or less verbatim in the server program: the only change you'll need to make is adding support for the `shutdown` command.
+
+The server's `main` function should have a loop in which is repeatedly waits for client connections and uses `chat_with_client` to communicate with each accepted client.  The main loop should terminate (and the server program should exit) when a client issues the `shutdown` command.)
+
+Make sure that when the server is done communicating with the client,
+it closes the client socket file descriptor (otherwise the connection will stay open!)
+
+## Deliverables
 
 Submit a zipfile containing your complete project.  The recommended
 way to do this is to run the command `make solution.zip`.  This
@@ -223,8 +316,14 @@ Archive:  solution.zip
     51078                     10 files
 ```
 
-Upload your zipfile to Gradescope as **HW6**.
-Make sure to include your name and
+Make sure that the `Makefile` you submit can build `calcTest`, `calcInteractive`,
+and `calcServer` targets.  Note that it is very likely that the autograder will
+replace `calcTest.c` with a customized version containing some additional tests.
+We highly recommend that you *don't* modify the `Makefile` in the project skeleton
+code, other than setting appropriate dependencies for for `calc.o` according
+to whether you implemented the calculator functionality in C or C++.
+
+Upload your zipfile to Gradescope as **HW6**.  Make sure to include your name and
 email address in *every* file you turn in (well, in every file for which
 it makes sense to do so anyway!)
 
