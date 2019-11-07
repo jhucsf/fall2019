@@ -34,7 +34,7 @@ The functionality component of the assignment (worth 70% of the total grade) wil
 
 ## Part 1: Calculator implementation
 
-**Important**: Part 1 of the homework is purely local computation, with no I/O required (network or otherwise).  You will need to complete it as a basis for Part 2.  So, get started on it right away!
+**Important**: Part 1 of the homework is purely local computation, with no I/O required (other than a provided demo program.)  You will need to complete it as a basis for Part 2.  So, get started on it right away!
 
 For Part 1, you will need to implement the following functions:
 
