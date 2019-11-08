@@ -48,7 +48,7 @@ If you find yourself wondering how to use a system call,
 you can use the `man` command to look up information. For
 example, to find out how the `read` system call works, use
 `man 2 read`. Sadly the `man` pages don’t describe the details
-equire to call system calls from assembly language, but [this
+required to call system calls from assembly language, but [this
 post](http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
 has everything you’ll need regarding register conventions and system
 call numbers.
