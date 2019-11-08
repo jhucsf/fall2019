@@ -230,7 +230,7 @@ Here is an example of how the server program should be run:
 
 The command-line argument to `calcServer` is the TCP port on which the server
 should listen for connections from clients.  You will need to choose a
-TCP port number that is 1024 or greater (ports 0–2013 require superuser
+TCP port number that is 1024 or greater (ports 0–1023 require superuser
 privileges.)
 
 To connect to the server, use the `telnet` program.  For example, to
