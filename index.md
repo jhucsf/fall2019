@@ -106,8 +106,8 @@ Fr Nov 8  | Virtual Memory ([slides](lec/lec27.pdf))                           |
 Mo Nov 11  | Virtual Memory II ([slides](lec/lec28.pdf))                        | BO 9.6-9.9
           | **Networks**
 We Nov 13  | Unix I/O ([slides](lec/lec29.pdf)) | BO 10
-Fr Nov 15  | IP Protocol, Unix Sockets                 | BO 11.1-11.4
-Mo Nov 18 | Application protocols, HTTP               | BO 11.5-11.6
+Fr Nov 15  | IP Protocol, Unix Sockets ([slides](lec/lec30.pdf), [server.c](res/server.c))                 | BO 11.1-11.4
+Mo Nov 18 | Application protocols, HTTP              | BO 11.5-11.6
           | **Threads and concurrency**
 We Nov 20 | Concurrency with processes, I/O multiplexing | BO 12.1-12.2
 Fr Nov 22 | Concurrency with threads                  | BO 12.3
