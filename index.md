@@ -103,7 +103,7 @@ Fr Nov 1  | Linking ([slides](lec/lec25.pdf), [markup](lec/lec25-ink.pdf))      
 Mo Nov 4  | Process Control ([slides](lec/lec26.pdf), [markup](lec/lec26-ink.pdf))                          | BO 8
 We Nov 6  | *Work day*
 Fr Nov 8  | Virtual Memory ([slides](lec/lec27.pdf))                           | BO 9.1-9.5
-Mo Nov 11  | Virtual Memory II ([slides](lec/lec28.pdf))                        | BO 9.6-9.9
+Mo Nov 11  | Virtual Memory II ([slides](lec/lec28.pdf), [markup](lec/lec28-ink.pdf))                        | BO 9.6-9.9
           | **Networks**
 We Nov 13  | Unix I/O ([slides](lec/lec29.pdf)) | BO 10
 Fr Nov 15  | IP Protocol, Unix Sockets ([slides](lec/lec30.pdf), [server.c](res/server.c))                 | BO 11.1-11.4
