@@ -3,7 +3,7 @@ layout: assignment
 title: "Late Days Policy"
 ---
 
-Over the course of the semester, you may use up to 5 late days for homework submissions.  A late day is defined as the 24 hour period after a submission deadline.  Note that there is a 5% grade overall deduction for each late day you use on a homework.
+Over the course of the semester, you may use up to 5 late days for homework submissions.  A late day is defined as the 24 hour period after a submission deadline.  <strike>Note that there is a 5% grade overall deduction for each late day you use on a homework.</strike>
 
 Important restrictions:
 
