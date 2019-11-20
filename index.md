@@ -110,7 +110,7 @@ Fr Nov 15  | IP Protocol, Unix Sockets ([slides](lec/lec30.pdf), [server.c](res/
 Mo Nov 18 | Application protocols, HTTP  ([slides](lec/lec31.pdf), [webserver.zip](res/webserver.zip), [webclient.zip](res/webclient.zip))            | BO 11.5-11.6
           | **Threads and concurrency**
 We Nov 20 | Concurrency with processes, I/O multiplexing ([slides](lec/lec32.pdf), [mp\_webserver.zip](res/mp_webserver.zip)) | BO 12.1-12.2
-Fr Nov 22 | Concurrency with threads                  | BO 12.3
+Fr Nov 22 | Concurrency with threads ([slides](lec/lec33.pdf), [mt\_webserver.zip](res/mt_webserver.zip), [mandelbrot.zip](res/mandelbrot.zip))                 | BO 12.3
 Mo Nov 25 | *Thanksgiving vacation, no class*
 We Nov 27 | *Thanksgiving vacation, no class*
 Fr Nov 29 | *Thanksgiving vacation, no class*
