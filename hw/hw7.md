@@ -120,7 +120,47 @@ you determined which regions of code were critical sections.
 
 ### Clean shutdown (extra credit!)
 
-Details on how to approach the extra credit coming soon.
+*You can ignore this section if you're not planning to try the extra
+credit, although what's described here is useful stuff to think about
+if you're interested in systems and network programming.*
+
+One difficulty in implementing a multithreaded server is how to allow it
+to shut down cleanly.
+
+For `calcServer`, the problem is that when one client sends a `shutdown`
+command, there could be other threads still running, and shutting down
+the server would interrupt these connections.
+
+For up to 10 points extra credit, you can implement the `shutdown`
+command such that the server will exit
+
+* after a `shutdown` command has been received from any client
+* only after all currently-connected clients have finished
+
+In addition, once a `shutdown` command has been received, `calcServer`
+should not accept any further client connections.
+
+Shutting down cleanly is fairly challenging.  Here are some
+rough ideas that might be useful:
+
+* Use a semaphore to keep track of the number of client threads
+  (this will also allow you to limit the maximum number of simultanous
+  client connections, which is good!)
+* Use the `select` or `poll` system calls to do a timed wait for
+  incoming client connections, rather than doing a blocking
+  call to `accept`
+* Use a `volatile` global variable to keep track of whether any client
+  has requested a shutdown: loading and storing the value of a volatile
+  global variable does not constitute a data race if, in its lifetime,
+  the variable only transitions from one value to one other value
+  (e.g., it's initially false, but some thread sets it to true at a later
+  time)
+
+The reason that calls to `accept` need to be nonblocking is because if the
+server is stuck waiting for an incoming client connection, it might not
+be aware that one of its currently-connected clients has requested a
+shutdown.  By using a timed wait, the server can "wake up" periodically
+in order to check the global shutdown variable.
 
 ## Deliverables
 
