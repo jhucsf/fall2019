@@ -8,8 +8,6 @@ title: "HW7: Multithreaded Internet calculator"
   - **Collaboration:** None
   - **Grading:** Packaging 10%, Style 10%, Design 10% Functionality 70%
 
-*Preliminary assignment description, not official yet*
-
 ## Overview
 
 In this assignment you will make your `calcServer` program from [HW6](hw6.html)
@@ -46,15 +44,111 @@ and (2) to use synchronization to protect shared data.
 
 ### Using threads for client connections
 
-TODO
+In general, it makes sense for server applications to handle connections from
+multiple clients simultaneously.  Threads are a useful mechanism for handling
+multiple client connections because they allow the code which communicates
+with each client to execute concurrently.
+
+In your main server loop, create a thread for each accepted client connection.
+Use `pthread_create` to create the client threads.  You can let the client
+threads be detached (i.e., by having them call `pthread_detach` with their
+own thread id.)  You do not need to place any upper limit on the number of
+threads that can be active simultaneously (although in practice that's a
+good idea.)
+
+You can test that your server can handle multiple client sessions simultaneously
+by running 2 (or more) `telnet` sessions connecting to the server.
+
+Note that as with the server from [HW6](hw6.html), all connections should share
+a common `struct Calc` instance.  This means that a variable set by one client
+is visible to other clients, and in fact, can be considered a simple form
+of communication between clients.
+
+The following screen capture shows two instances of telnet connecting to the
+same `calcServer` (using [GNU Screen](https://www.gnu.org/software/screen/)
+as a split-screen terminal):
+
+<center>
+<video width="720" controls>
+  <source src="calcServer.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</center>
 
 ### Using synchronization to protect shared data
 
-TODO
+Any time two thread access shared data, such that one or both threads
+might modify the shared data, *synchronization* is typically necessary
+to ensure the integrity of the shared data.
+
+In your calculator server, the data structure you used to store the
+values of variables (quite possibly an STL `map` object) will be accessed
+by multiple client threads.  Without synchronization, this data structure
+could be corrupted.
+
+To allow safe access from multiple client threads, use a mutex or semaphore
+to protect the shared data in your `struct Calc` implementation.  The following
+guidelines should help you think about how you will need to modify your program:
+
+* Your calculator data type (e.g., `class CalcImpl` if you used C++) will need
+  to have a mutex or semaphore as a member variable (i.e., a
+  variable whose type is `pthread_mutex_t` or `sem_t`)
+* In initializing a calculator instance, the mutex or semaphore should be
+  initialized (e.g., call `pthread_mutex_init` or `sem_init`)
+* In destroying a calculator instance, the appropriate cleanup function
+  (`pthread_mutex_destroy` or `sem_destroy`) should be called
+* Any code accessing or modifying the data structure storing the values of
+  variables should be executed with the mutex or semaphore held for exclusive
+  access; this will cause threads to take turns accessing the shared data
+  (achieving *mutual exclusion*)
+
+Critical sections (regions of code where mutual exclusion is necessary)
+should be protected with calls to `pthread_mutex_lock`/`pthread_mutex_unlock`
+or `sem_wait`/`sem_post`.
+
+Note that access to data that is either
+
+* *not* shared between client threads, or
+* is shared between client threads, but never modified
+
+does not need to be protected.
+
+**Important requirement**: In a file called `README.txt`, briefly describe
+how you made the calculator instance's shared data safe to access from multiple
+threads.  Indicate what kind of synchronization object you used, and how
+you determined which regions of code were critical sections.
+
+### Clean shutdown (extra credit!)
+
+Details on how to approach the extra credit coming soon.
 
 ## Deliverables
 
-TODO
+You will need to make one modification to your `Makefile` from HW6.  Change
+the rule to build `solution.zip` from:
+
+```make
+solution.zip :
+	zip -9r solution.zip *.c *.cpp *.h Makefile
+```
+
+to
+
+```make
+solution.zip :
+	zip -9r solution.zip *.c *.cpp *.h Makefile README.txt
+```
+
+This change will ensure that your `README.txt` is submitted.
+
+To submit your work, run the command
+
+```
+make solution.zip
+```
+
+and upload `solution.zip` to Gradescope as **HW7**.
+
 
 ## Grading
 
