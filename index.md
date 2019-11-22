@@ -109,10 +109,10 @@ Mo Nov 11  | Virtual Memory II ([slides](lec/lec28.pdf), [markup](lec/lec28-ink.
           | **Networks**
 We Nov 13  | Unix I/O ([slides](lec/lec29.pdf), [markup](lec/lec29-ink.pdf)) | BO 10
 Fr Nov 15  | IP Protocol, Unix Sockets ([slides](lec/lec30.pdf), [server.c](res/server.c))                 | BO 11.1-11.4
-Mo Nov 18 | Application protocols, HTTP  ([slides](lec/lec31.pdf), [webserver.zip](res/webserver.zip), [webclient.zip](res/webclient.zip))            | BO 11.5-11.6
+Mo Nov 18 | Application protocols, HTTP  ([slides](lec/lec31.pdf), [markup](lec/lec31-ink.pdf), [webserver.zip](res/webserver.zip), [webclient.zip](res/webclient.zip))            | BO 11.5-11.6
           | **Threads and concurrency**
-We Nov 20 | Concurrency with processes, I/O multiplexing ([slides](lec/lec32.pdf), [mp\_webserver.zip](res/mp_webserver.zip)) | BO 12.1-12.2
-Fr Nov 22 | Concurrency with threads ([slides](lec/lec33.pdf), [mt\_webserver.zip](res/mt_webserver.zip), [mandelbrot.zip](res/mandelbrot.zip))                 | BO 12.3
+We Nov 20 | Concurrency with processes, I/O multiplexing ([slides](lec/lec32.pdf), [markup](lec/lec32-ink.pdf), [mp\_webserver.zip](res/mp_webserver.zip)) | BO 12.1-12.2
+Fr Nov 22 | Concurrency with threads ([slides](lec/lec33.pdf), [markup](lec/lec33-ink.pdf), [mt\_webserver.zip](res/mt_webserver.zip), [mandelbrot.zip](res/mandelbrot.zip))                 | BO 12.3
 Mo Nov 25 | *Thanksgiving vacation, no class*
 We Nov 27 | *Thanksgiving vacation, no class*
 Fr Nov 29 | *Thanksgiving vacation, no class*
