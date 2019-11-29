@@ -116,6 +116,6 @@ Fr Nov 22 | Concurrency with threads ([slides](lec/lec33.pdf), [markup](lec/lec3
 Mo Nov 25 | *Thanksgiving vacation, no class*
 We Nov 27 | *Thanksgiving vacation, no class*
 Fr Nov 29 | *Thanksgiving vacation, no class*
-Mo Dec 2  | Synchronizing access to data              | BO 12.4-12.5
+Mo Dec 2  | Synchronizing access to data ([slides](lec/lec34.pdf), [synch.zip](res/synch.zip))              | BO 12.4-12.5
 We Dec 4  | Parallelism, concurrency issues           | BO 12.7
 Fr Dec 6  | Final exam review
