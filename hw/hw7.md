@@ -8,6 +8,8 @@ title: "HW7: Multithreaded Internet calculator"
   - **Collaboration:** None
   - **Grading:** Packaging 10%, Style 10%, Design 10% Functionality 70%
 
+*Update 12/3*: Added [Testing](#testing) section
+
 ## Overview
 
 In this assignment you will make your `calcServer` program from [HW6](hw6.html)
@@ -161,6 +163,92 @@ server is stuck waiting for an incoming client connection, it might not
 be aware that one of its currently-connected clients has requested a
 shutdown.  By using a timed wait, the server can "wake up" periodically
 in order to check the global shutdown variable.
+
+### Testing
+
+Here are some automated tests you can try.
+
+Download the following files into the directory containing your `calcServer` executable:
+
+* [test\_server\_concurrent1.sh](hw7/test_server_concurrent1.sh)
+* [test\_server\_concurrent2.sh](hw7/test_server_concurrent2.sh)
+* [test\_server\_concurrent\_stress.sh](hw7/test_server_concurrent_stress.sh)
+* [test\_input.txt](hw7/test_input.txt)
+* [conc\_test\_input1.txt](hw7/conc_test_input1.txt)
+* [conc\_test\_input2.txt](hw7/conc_test_input2.txt)
+
+You can download the above files from a terminal by running the following commands:
+
+```bash
+curl -O https://jhucsf.github.io/fall2019/hw/hw7/test_server_concurrent1.sh
+curl -O https://jhucsf.github.io/fall2019/hw/hw7/test_server_concurrent2.sh
+curl -O https://jhucsf.github.io/fall2019/hw/hw7/test_server_concurrent_stress.sh
+curl -O https://jhucsf.github.io/fall2019/hw/hw7/test_input.txt
+curl -O https://jhucsf.github.io/fall2019/hw/hw7/conc_test_input1.txt
+curl -O https://jhucsf.github.io/fall2019/hw/hw7/conc_test_input2.txt
+```
+
+Make the scripts executable:
+
+```bash
+chmod a+x test_server_concurrent1.sh
+chmod a+x test_server_concurrent2.sh
+chmod a+x test_server_concurrent_stress.sh
+```
+
+**First test**: run the following commands:
+
+```bash
+./test_server_concurrent1.sh 30000 test_input.txt actual1.txt
+cat actual1.txt
+```
+
+The output of the `cat` command should be:
+
+```
+3
+4
+12
+```
+
+This test tests that a long-running client does not prevent the server from handling an additional client connection.
+
+**Second test**: run the following commands:
+
+```bash
+./test_server_concurrent2.sh 30000 conc_test_input1.txt actual1.txt conc_test_input2.txt actual2.txt
+cat actual1.txt
+cat actual2.txt
+```
+
+The output of the first `cat` command should be:
+
+```
+1
+42
+```
+
+The output of the second `cat` command should be:
+
+```
+40
+54
+```
+
+This test tests that two client sessions can interact with each other through commands accessing a shared variable.
+
+**Third test**: run the following commands:
+
+```bash
+./test_server_concurrent_stress.sh 30000
+cat final_count.txt
+```
+
+The file `final_count.txt` does not need to contain any specific value, but it will probably be somewhere between 100000 and 200000.
+
+If you fully synchronized `calc_eval`, such that each expression is fully evaluated with the mutex held, the final count should be 200000.
+
+The most important outcome of this test is that your server should not crash.
 
 ## Deliverables
 
