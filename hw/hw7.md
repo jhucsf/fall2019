@@ -10,6 +10,8 @@ title: "HW7: Multithreaded Internet calculator"
 
 *Update 12/3*: Added [Testing](#testing) section
 
+*Update 12/4*: Corrected output for first test, and posted updated [test\_server\_concurrent\_stress.sh](hw7/test_server_concurrent_stress.sh) script
+
 ## Overview
 
 In this assignment you will make your `calcServer` program from [HW6](hw6.html)
@@ -206,9 +208,9 @@ cat actual1.txt
 The output of the `cat` command should be:
 
 ```
+2
 3
-4
-12
+5
 ```
 
 This test tests that a long-running client does not prevent the server from handling an additional client connection.
