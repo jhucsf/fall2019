@@ -79,11 +79,11 @@ there are no longer any threads using the `Queue`.
 typedef struct Node_ {
   int val;
   struct Node_ *next;
-  pthread_mutex_t lock;
 } Node;
 
 typedef struct {
   Node *head, *tail;
+  pthread_mutex_t lock;
 } Queue;
 
 Queue *q_create(void) {
@@ -129,7 +129,7 @@ int q_dequeue(Queue *q) {
     result = -1;
   } else {
     Node *n = q->head;
-    int result = n->val;
+    result = n->val;
     q->head = n->next;
     if (q->head == NULL) {
       q->tail = NULL; /* queue became empty */
