@@ -118,4 +118,4 @@ We Nov 27 | *Thanksgiving vacation, no class*
 Fr Nov 29 | *Thanksgiving vacation, no class*
 Mo Dec 2  | Synchronizing access to data ([slides](lec/lec34.pdf), [synch.zip](res/synch.zip))              | BO 12.4-12.5
 We Dec 4  | Parallelism, concurrency issues ([slides](lec/lec35.pdf), [synch2.zip](res/synch2.zip))          | BO 12.7
-Fr Dec 6  | Final exam review | [Fall 2016 final](https://www.cs.jhu.edu/~phi/csf/final2016.pdf), [solutions](https://www.cs.jhu.edu/~phi/csf/final2016-solutions.pdf), [Networks/threads review problems](res/final_review.html)
+Fr Dec 6  | Final exam review | [Fall 2016 final](https://www.cs.jhu.edu/~phi/csf/final2016.pdf), [solutions](https://www.cs.jhu.edu/~phi/csf/final2016-solutions.pdf), [Networks/threads review problems](res/final_review.html), [networks/threads solutions](res/final_review_soln.html)
