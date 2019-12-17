@@ -3,6 +3,8 @@ layout: default
 title: "Home page"
 ---
 
+Reference solution for final exam: [final\_ref\_soln.pdf](res/final_ref_soln.pdf)
+
 ## What is this web page?
 
 This web page supplements [Prof. Koehn's CSF web page](https://www.cs.jhu.edu/~phi/csf).  It is mainly intended for Section 02 of the course, taught by [David Hovemeyer](https://www.cs.jhu.edu/~daveho).
